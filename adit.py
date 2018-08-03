@@ -336,7 +336,7 @@ def help():
     key = Setmain["keyCommand"]
     key = key.title()
     helpMessage = "╔══════════════════════════════╗" + "\n" + \
-                  "     🍁🍁🍁 Aditmadzs 🍁🍁🍁" + "\n" + \
+                  "      ◄]·✪Aditmadzs✪·[►" + "\n" + \
                   "╚══════════════════════════════╝" + "\n" + \
                   "╔══════════════════════════════╗" + "\n" + \
                   "     ◄]·✪·Menu·✪·[►" + "\n" + \
@@ -406,7 +406,7 @@ def help():
                   "     ◄]·✪·Protect·✪·[►" + "\n" + \
                   "╠══════════════════════════════╝" + "\n" + \
                   "╠❂➣ " + key + "Notag「on/off」\n" + \
-                  "╠❂➣ " + key + "Semua pro「on/off」\n" + \
+                  "╠❂➣ " + key + "Allpro「on/off」\n" + \
                   "╠❂➣ " + key + "Protecturl「on/off」\n" + \
                   "╠❂➣ " + key + "Protectjoin「on/off」\n" + \
                   "╠❂➣ " + key + "Protectkick「on/off」\n" + \
@@ -527,7 +527,7 @@ def helpbot():
 def infomeme():
     helpMessage2 = """
 ╔══════════════════════════════╗
-       🍁🍁🍁 Aditmadzs 🍁🍁🍁
+       ◄]·✪Aditmadzs✪·[►
 ╚══════════════════════════════╝
 ╔══════════════════════════════╗
     ◄]·✪·List Meme·✪·[►
@@ -1790,7 +1790,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["changePicture"] = True
-                                aditmadzs.sendMessage(msg.to,"Kirim fotonya.....")
+                                ki.sendMessage(msg.to,"Kirim fotonya.....")
                                 
                         elif cmd == "updatefoto":
                           if wait["selfbot"] == True:
