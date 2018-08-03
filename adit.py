@@ -23,13 +23,13 @@ ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-#jangan di apus juga kali midnya..
+#jangan di apus juga kali midnya.. untuk nambahin mid contoh ["u874a7502c02896b2edbb3445c2615d35","MID LU"]
 poll = LinePoll(aditmadzs)
 call = aditmadzs
-creator = ["u874a7502c02896b2edbb3445c2615d35","MID"]
-owner = ["u874a7502c02896b2edbb3445c2615d35","MID"]
-admin = ["u874a7502c02896b2edbb3445c2615d35","MID"]
-staff = ["u874a7502c02896b2edbb3445c2615d35","MID"]
+creator = ["u874a7502c02896b2edbb3445c2615d35"]
+owner = ["u874a7502c02896b2edbb3445c2615d35"]
+admin = ["u874a7502c02896b2edbb3445c2615d35"]
+staff = ["u874a7502c02896b2edbb3445c2615d35"]
 mid = aditmadzs.getProfile().mid
 Amid = ki.getProfile().mid
 KAC = [aditmadzs,ki]
