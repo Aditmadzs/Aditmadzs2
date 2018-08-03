@@ -23,7 +23,7 @@ ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-#jangan di apus juga kali midnya.. untuk nambahin mid contoh ["u874a7502c02896b2edbb3445c2615d35","MID LU"]
+#Jangan ubah mid creator TOD
 poll = LinePoll(aditmadzs)
 call = aditmadzs
 creator = ["u874a7502c02896b2edbb3445c2615d35"]
@@ -447,7 +447,7 @@ def help():
                   "╠❂➣ " + key + "Listprotect\n" + \
                   "╠❂➣ Ketik「 Refresh 」Jika Sudah\n╠❂➣ Menggunakan Command Diatas...\n" + \
                   "╠══════════════════════════════╗" + "\n" + \
-                  "     🍁🍁🍁 Aditmadzs 🍁🍁🍁" + "\n" + \
+                  "      ◄]·✪Aditmadzs✪·[►" + "\n" + \
                   "╠══════════════════════════════╝" + "\n" + \
                   "╠══════════════════════════════╗" + "\n" + \
                   "◄]·✪line.me/ti/p/~adit_cmct✪·[►" + "\n" + \
@@ -517,7 +517,7 @@ def helpbot():
                   "╠❂➣ " + key + "Clearban\n" + \
                   "╠❂➣ " + key + "Refresh\n" + \
                   "╠══════════════════════════════╗" + "\n" + \
-                  "     🍁🍁🍁 Aditmadzs 🍁🍁🍁" + "\n" + \
+                  "      ◄]·✪Aditmadzs✪·[►" + "\n" + \
                   "╠══════════════════════════════╝" + "\n" + \
                   "╠══════════════════════════════╗" + "\n" + \
                   "◄]·✪line.me/ti/p/~adit_cmct✪·[►" + "\n" + \
@@ -532,36 +532,40 @@ def infomeme():
 ╔══════════════════════════════╗
     ◄]·✪·List Meme·✪·[►
 ╠══════════════════════════════╝
-┣🇮🇩┫ Buzz
-┣🇮🇩┫ Spongebob
-┣🇮🇩┫ Patrick
-┣🇮🇩┫ Doge
-┣🇮🇩┫ Joker
-┣🇮🇩┫ Xzibit
-┣🇮🇩┫ You_tried
-┣🇮🇩┫ cb
-┣🇮🇩┫ blb
-┣🇮🇩┫ wonka
-┣🇮🇩┫ keanu
-┣🇮🇩┫ cryingfloor
-┣🇮🇩┫ disastergirl
-┣🇮🇩┫ facepalm
-┣🇮🇩┫ fwp
-┣🇮🇩┫ grumpycat
-┣🇮🇩┫ captain
-┣🇮🇩┫ mmm
-┣🇮🇩┫ rollsafe
-┣🇮🇩┫ sad-obama
-┣🇮🇩┫ sad-clinton
-┣🇮🇩┫ aag
-┣🇮🇩┫ sarcasticbear
-┣🇮🇩┫ sk
-┣🇮🇩┫ sparta
-┣🇮🇩┫ sad
-┣🇮🇩┫contoh:
-┣🇮🇩┫Meme@buzz@lu tau?@gatau
-┃🍁┣━━━━━━━━━━━━━━━━━━━━
-┗━━━━━┫🎯Aditmadzs🎯┣━━━━━
+╠❂➣ Buzz
+╠❂➣ Spongebob
+╠❂➣ Patrick
+╠❂➣ Doge
+╠❂➣ Joker
+╠❂➣ Xzibit
+╠❂➣ You_tried
+╠❂➣ cb
+╠❂➣ blb
+╠❂➣ wonka
+╠❂➣ keanu
+╠❂➣ cryingfloor
+╠❂➣ disastergirl
+╠❂➣ facepalm
+╠❂➣ fwp
+╠❂➣ grumpycat
+╠❂➣ captain
+╠❂➣ mmm
+╠❂➣ rollsafe
+╠❂➣ sad-obama
+╠❂➣ sad-clinton
+╠❂➣ aag
+╠❂➣ sarcasticbear
+╠❂➣ sk
+╠❂➣ sparta
+╠❂➣ sad
+╠❂➣ contoh:
+╠❂➣ Meme@buzz@lu tau?@gatau
+╠══════════════════════════════╗
+      ◄]·✪Aditmadzs✪·[►
+╠══════════════════════════════╝
+╠══════════════════════════════╗
+◄]·✪line.me/ti/p/~adit_cmct✪·[►
+╚══════════════════════════════╝
 """
     return helpMessage2
     
