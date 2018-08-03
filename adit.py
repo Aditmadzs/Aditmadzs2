@@ -1463,11 +1463,7 @@ def bot(op):
                                 if msg.to in protectcancel: md+="┃┃🍁 ✔️ Protectcancel「ON」\n"
                                 else: md+="┃┃🍁 ✖ Protectcancel「OFF」\n"
                                 if msg.to in protectinvite: md+="┃┃🍁 ✔️ Protectinvite「ON」\n"
-                                else: md+="┃┃🍁 ✖ Protectinvite「OFF」\n"                                
-                                if msg.to in protectantijs: md+="┃┃🍁 ✔️ Antijs「ON」\n"
-                                else: md+="┃┃🍁 ✖ Antijs「OFF」\n"  
-                                if msg.to in ghost: md+="┃┃🍁 ✔️ Ghost「ON」\n"
-                                else: md+="┃┃🍁 ✖ Ghost「OFF」\n"                                   
+                                else: md+="┃┃🍁 ✖ Protectinvite「OFF」\n"                                                
                                 aditmadzs.sendMessage(msg.to, md+"┃┣━━━━━━━━━━━━━━━━━━━━\n┃┃❧ Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n┃┃❧ Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n  ┗━━━━━━━━━━━━━━━━━")
                                 
                         elif cmd == "status translate":
