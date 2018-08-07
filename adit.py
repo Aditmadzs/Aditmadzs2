@@ -8,6 +8,7 @@ import pytz, datetime, pafy, time, timeit, random, sys, ast, re, os, json, subpr
 from datetime import timedelta, date
 from datetime import datetime
 from bs4 import BeautifulSoup
+import pyimgflip
 from googletrans import Translator
 import youtube_dl
 
@@ -319,7 +320,7 @@ def sendMention(to, mid, firstmessage):
         timeNow = datetime.now(tz=tz)
         eltime = time.time() - mulai
         bot = runtime(eltime)
-        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n🐚 Group : "+str(len(gid))+"\n🐚 Teman : "+str(len(teman))+"\n🐚 Expired : In "+hari+"\n🐚 Version : ARIFISTIFIK\n🐚 Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n🐚 Runtime : \n • "+bot
+        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n🐚 Group : "+str(len(gid))+"\n🐚 Teman : "+str(len(teman))+"\n🐚 Expired : In "+hari+"\n🐚 Version : Python3\n🐚 Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n🐚 Runtime : \n • "+bot
         aditmadzs.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         aditmadzs.sendMessage(to, "[ INFO ] Error :\n" + str(error))
@@ -1010,19 +1011,19 @@ def bot(op):
                         if msg_dict[msg_id]["from"]:
                            if msg_dict[msg_id]["text"] == 'Gambarnya dibawah':
                                 ginfo = aditmadzs.getGroup(at)
-                                arifAR = aditmadzs.getContact(msg_dict[msg_id]["from"])
+                                Aditmadzs = aditmadzs.getContact(msg_dict[msg_id]["from"])
                                 zx = ""
                                 zxc = ""
                                 zx2 = []
                                 xpesan =  "「 Gambar Dihapus 」\n• Pengirim : "
                                 ret_ = "• Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
-                                ry = str(arifAR.displayName)
+                                ry = str(Aditmadzs.displayName)
                                 pesan = ''
                                 pesan2 = pesan+"@x \n"
                                 xlen = str(len(zxc)+len(xpesan))
                                 xlen2 = str(len(zxc)+len(pesan2)+len(xpesan)-1)
-                                zx = {'S':xlen, 'E':xlen2, 'M':arifAR.mid}
+                                zx = {'S':xlen, 'E':xlen2, 'M':Aditmadzs.mid}
                                 zx2.append(zx)
                                 zxc += pesan2
                                 text = xpesan + zxc + ret_ + ""
@@ -1030,9 +1031,9 @@ def bot(op):
                                 aditmadzs.sendImage(at, msg_dict[msg_id]["data"])
                            else:
                                 ginfo = aditmadzs.getGroup(at)
-                                arifAR = aditmadzs.getContact(msg_dict[msg_id]["from"])
+                                Aditmadzs = aditmadzs.getContact(msg_dict[msg_id]["from"])
                                 ret_ =  "「 Pesan Dihapus 」\n"
-                                ret_ += "• Pengirim : {}".format(str(arifAR.displayName))
+                                ret_ += "• Pengirim : {}".format(str(Aditmadzs.displayName))
                                 ret_ += "\n• Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
                                 ret_ += "\n• Pesannya : {}".format(str(msg_dict[msg_id]["text"]))
@@ -1049,9 +1050,9 @@ def bot(op):
                     if msg_id in msg_dict1:
                         if msg_dict1[msg_id]["from"]:
                                 ginfo = aditmadzs.getGroup(at)
-                                arifAR = aditmadzs.getContact(msg_dict1[msg_id]["from"])
+                                Aditmadzs = aditmadzs.getContact(msg_dict1[msg_id]["from"])
                                 ret_ =  "「 Sticker Dihapus 」\n"
-                                ret_ += "• Pengirim : {}".format(str(arifAR.displayName))
+                                ret_ += "• Pengirim : {}".format(str(Aditmadzs.displayName))
                                 ret_ += "\n• Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict1[msg_id]["createdTime"])))
                                 ret_ += "{}".format(str(msg_dict1[msg_id]["text"]))
