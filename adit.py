@@ -24,7 +24,7 @@ ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-#ubah mid di dalem admin json dengan mid kalian
+#ubah mid di dalem admin,owner,creator.json dengan mid kalian
 poll = LinePoll(aditmadzs)
 call = aditmadzs
 creator = ["u874a7502c02896b2edbb3445c2615d35"]
