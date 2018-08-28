@@ -10,6 +10,7 @@ from datetime import timedelta, date
 from datetime import datetime
 from bs4 import BeautifulSoup
 from googletrans import Translator
+import youtube_dlimport Translator
 import youtube_dl
 
 cl = LineClient()
@@ -23,10 +24,10 @@ call = cl
 
 mid = cl.getProfile().mid
 
-admin = [mid]
+admin = ["u4862fe4b182b2fd194a3108e2f3662e8"]
 
 KAC = [cl]
-Bots = [mid]
+Bots = ["u4862fe4b182b2fd194a3108e2f3662e8"]
 Arif = admin
 
 welcome = []
@@ -1030,8 +1031,8 @@ def bot(op):
                         if cmd == "help":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               helpMessage = help()
-                               cl.sendMessage(msg.to, str(helpMessage))
+                               helpMessage2 = help()
+                               cl.sendMessage(msg.to, str(helpMessage2))
                                cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         if cmd == "selfs on":
