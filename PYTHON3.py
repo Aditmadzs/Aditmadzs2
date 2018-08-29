@@ -10,7 +10,6 @@ from datetime import timedelta, date
 from datetime import datetime
 from bs4 import BeautifulSoup
 from googletrans import Translator
-import youtube_dlimport Translator
 import youtube_dl
 
 cl = LineClient()
@@ -357,7 +356,7 @@ def command(text):
 
 
 def infomeme():
-    helpMessage2 = """
+    helpMessage = """
 ╭━━━━━━━━━━━━━━━━
 ┃     🔰 รายการคำสั่ง  🔰
 ┃━━━━━━━━━━━━━━━━
@@ -503,9 +502,9 @@ def infomeme():
 ┃    【さัএπัஞ✵ບิथℓℓҨतΩ】
 ╰━━━━━━━━━━━━━━━━
 """
-    return helpMessage2
+    return helpMessage
 def listharga():
-    helpMessage3 = """
+    helpMessage2 = """
 【さัএπัஞ✵ບิथℓℓҨतΩ】
 """
 
@@ -1031,8 +1030,8 @@ def bot(op):
                         if cmd == "help":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               helpMessage2 = help()
-                               cl.sendMessage(msg.to, str(helpMessage2))
+                               helpMessage = help()
+                               cl.sendMessage(msg.to, str(helpMessage))
                                cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         if cmd == "selfs on":
