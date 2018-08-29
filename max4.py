@@ -12,31 +12,31 @@ from googletrans import Translator
 import youtube_dl
 
 cl = LineClient()
-#cl = LineClient(authToken='EwyXwTEbrfGokoS2Y4v8.sgl/sXGRl9guOXcolZzI6a.PABzl7j4CubRpzzxk5scU1NlRnj2xOGnwM5c/CGFZt8=')
+#cl = LineClient(authToken='')
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 
 ki = LineClient()
-#ki = LineClient(authToken='EwZPEfP04NyvrkwvT5j6.ciAODWIOJBp4UC40YB2aPG.AFkJbxee/KyH9wm9P14BPL1ntHFzmSHu9+fvgxeBPEg=')
+#ki = LineClient(authToken='')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
 kk = LineClient()
-#kk = LineClient(authToken='EwYRdytxSIqQYb1FuAN6.WKcub2t+uJueUYfdC1qAbG.kcuE5u3klvfwd1IYM+zs5xkxbo3+pIsLrjZ/Um1ti5U=')
+#kk = LineClient(authToken='')
 kk.log("Auth Token : " + str(kk.authToken))
 channel2 = LineChannel(kk)
 kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
 
 kc = LineClient()
-#kc = LineClient(authToken='EwzQfNY5yaHg3Rs3OIy9.WrtAVyZDRBvprHExwvnXkq.5lj592fbau7e3dxelya1Ih8v9FHQpCe09CU7Jrf66xU=')
+#kc = LineClient(authToken='')
 kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
 sw = LineClient()
-#sw = LineClient(authToken='EwPYN0FSJU0JDHi4hWl6.uEr21FsOaeuLSWAmhT6MLG.GUW49h6Z9j04PmS0EyEtIqOAFQkTkAwAcJ/DRgND10M=')
+#sw = LineClient(authToken='')
 sw.log("Auth Token : " + str(sw.authToken))
 channel11 = LineChannel(sw)
 sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
