@@ -2008,7 +2008,7 @@ def bot(op):
                                        nm5 += [nama[m]]
                                    mentionMembers(msg.to, nm4)
 
-                        elif cmd == "tagall":
+                        elif cmd == "แทค":
                           if wait["selfbot"] == True:
                             group = cl.getGroup(msg.to)
                             nama = [contact.mid for contact in group.members]
@@ -2105,7 +2105,7 @@ def bot(op):
                                 kk.sendMessage(msg.to,responsename2)
                                 kc.sendMessage(msg.to,responsename3)
     
-                        elif cmd == "join dit":
+                        elif cmd == "join":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = aditmadzs.getGroup(msg.to)
@@ -2121,7 +2121,7 @@ def bot(op):
                                 G.preventedJoinByTicket = True
                                 kc.updateGroup(G)
 
-                        elif cmd == "bye dit":
+                        elif cmd == "bye":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = aditmadzs.getGroup(msg.to)
@@ -2144,7 +2144,7 @@ def bot(op):
                                 get_contact_time = time.time() - get_contact_time_start
                                 aditmadzs.sendMessage(msg.to, " »» Aditmadzs Speed respon\n\n - Get Profile\n   %.10f\n - Get Contact\n   %.10f\n - Get Group\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
 
-                        elif cmd == "speed" or cmd == "sp":
+                        elif cmd == "/speed" or cmd == "sp":
                           if wait["selfbot"] == True:
                                start = time.time()
                                print("Speed")
@@ -2152,7 +2152,7 @@ def bot(op):
                                contact = aditmadzs.getProfile()
                                mids = [contact.mid]
                                name = "{}".format(str(contact.displayName))
-                               url = 'https://line.me/ti/p/~adit_cmct'
+                               url = 'https://line.me/ti/p/~max_pv'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(contact.pictureStatus))
                                text = "Waiting...."
                                sendMentionV10(msg.to, str(text), str(name), str(url), str(iconlink))
