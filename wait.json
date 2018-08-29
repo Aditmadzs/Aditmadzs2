@@ -23,7 +23,7 @@
     "comment": "Like like & like by Aditmadzs",
     "contact": false,
     "dblacklist": false,
-    "delladmin": true,
+    "delladmin": false,
     "dellbots": false,
     "dellstaff": false,
     "detectMention": true,
