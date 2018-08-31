@@ -17,7 +17,8 @@ botStart = time.time()
 #line = LINE("SEPRI TOKEN")
 #line = LINE("Email","Password SEPRI")
 
-line = LINE("Evee7nmpiUAJIysjZ1jd.NWNpYXFqn/ktA3uB2DqoRq.BJttGBJSQbJIcfAQ6ZMLASiZGMCjV0bPUSAB91yy6gE=")  #ISI DISINI DENGAN TOKEN CHROME,,,
+line = LINE()
+#line = LINE("")  #ISI DISINI DENGAN TOKEN CHROME,,,
 line.log("Auth Token : " + str(line.authToken))
 channelToken = line.getChannelResult()
 line.log("Channel Token : " + str(channelToken))
