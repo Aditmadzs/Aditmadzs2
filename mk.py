@@ -35,6 +35,12 @@ kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
+ke = LineClient()
+#ke = LineClient(authToken='TOKEN LU')
+ke.log("Auth Token : " + str(ke.authToken))
+channel3 = LineChannel(ke)
+ke.log("Channel Access Token : " + str(channel4.channelAccessToken))
+
 poll = LinePoll(aditmadzs)
 call = aditmadzs
 creator = ["u4862fe4b182b2fd194a3108e2f3662e8"]
@@ -45,9 +51,10 @@ mid = aditmadzs.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
-KAC = [aditmadzs,ki,kk,kc]
-ABC = [ki,kk,kc]
-Bots = [mid,Amid,Bmid,Cmid]
+Dmid = ke.getProfile().mid
+KAC = [aditmadzs,ki,kk,kc,ke]
+ABC = [ki,kk,kc,ke]
+Bots = [mid,Amid,Bmid,Cmid,Dmid]
 Madzs = admin + staff
 
 protectqr = []
