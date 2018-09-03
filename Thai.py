@@ -11,8 +11,8 @@ from bs4 import BeautifulSoup
 from googletrans import Translator
 import youtube_dl
 #BOT INI BUAT KALIAN YANG MEMANG MEMBUTUHKAN
-#cl = LineClient()
-cl = LineClient(authToken='')
+cl = LineClient()
+#cl = LineClient(authToken='')
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
@@ -103,7 +103,7 @@ wait = {
     "selfbot":True,
     "unsend":True,
     "mention":"Hayoo ngintip ,ketuaan kan..ngaku hayoo",
-    "Respontag":"มีไรคะ...!!",
+    "Respontag":"มีไร...!!",
     "welcome":"Nah Calon Tikungan Baru",
     "leave":"NAH LOH BAPER KHAAAN KHAAAN ,KEBANYAKAN DRAMA SIHH..😂",
     "comment":"Like by【さัএπัஞ✵ບิथℓℓҨतΩ】",
@@ -358,12 +358,12 @@ def help():
     key2 = Setmain["namecreator"]
     key2 = key2.title()
     helpMessage = "🔰 【さัএπัஞ✵ບิथℓℓҨतΩ】: "+ key2 +" 🔰" + "\n" + \
-                  "🔥 Help Message 🔥" + "\n" + \
+                  "🔥 ข้อความ คำสั่ง 🔥" + "\n" + \
                   "     Gunakan「 " + key + " 」Di Depannya\n" + \
                   "\n🔵 Menu" + "\n" + \
-                  "🔰 " + key + "Help\n" + \
-                  "🔰 " + key + "Help bot\n" + \
-                  "🔰 " + key + "Translate\n" + \
+                  "🔰 " + key + "คำสั่ง\n" + \
+                  "🔰 " + key + "คำสั่ง2\n" + \
+                  "🔰 " + key + "คำสั่งแปล\n" + \
                   "🔰 " + key + "Autotrans「en-on/en-off」\n" + \
                   "🔰 " + key + "Autotrans「id-on/id-off」\n" + \
                   "🔰 " + key + "Autotrans「th-on/th-off」\n" + \
@@ -371,42 +371,42 @@ def help():
                   "🔰 " + key + "Autotrans「ar-on/ar-off」\n" + \
                   "🔰 " + key + "Info meme\n" + \
                   "🔰 " + key + "Self「on/off」\n" + \
-                  "🔰 " + key + "Me\n" + \
-                  "🔰 " + key + "Mycopy「@」\n" + \
-                  "🔰 " + key + "Mybackup\n" + \
-                  "🔰 " + key + "Stealname「@」\n" + \
-                  "🔰 " + key + "Stealbio「@」\n" + \
-                  "🔰 " + key + "Stealpicture「@」\n" + \
-                  "🔰 " + key + "Stealcover「@」\n" + \
-                  "🔰 " + key + "Stealvideoprofile「@」\n" + \
-                  "🔰 " + key + "Mymid\n" + \
-                  "🔰 " + key + "Mid「@」\n" + \
-                  "🔰 " + key + "Info 「@」\n" + \
-                  "🔰 " + key + "Status\n" + \
-                  "🔰 " + key + "About\n" + \
-                  "🔰 " + key + "Restart\n" + \
-                  "🔰 " + key + "Runtime\n" + \
-                  "🔰 " + key + "Creator\n" + \
-                  "🔰 " + key + "Respon\n" + \
-                  "🔰 " + key + "Speed/Sp\n" + \
+                  "🔰 " + key + "คท\n" + \
+                  "🔰 " + key + "ก็อป「@」\n" + \
+                  "🔰 " + key + "คืนร่าง\n" + \
+                  "🔰 " + key + "ชื่อ「@」\n" + \
+                  "🔰 " + key + "ตัส「@」\n" + \
+                  "🔰 " + key + "รูป「@」\n" + \
+                  "🔰 " + key + "ปก「@」\n" + \
+                  "🔰 " + key + "วิดีโอ「@」\n" + \
+                  "🔰 " + key + "ไอดี\n" + \
+                  "🔰 " + key + "ไอดี「@」\n" + \
+                  "🔰 " + key + "ข้อมูล 「@」\n" + \
+                  "🔰 " + key + "เชคค่า\n" + \
+                  "🔰 " + key + "ข้อมูล\n" + \
+                  "🔰 " + key + "รีบูส\n" + \
+                  "🔰 " + key + "ออน\n" + \
+                  "🔰 " + key + "ผส\n" + \
+                  "🔰 " + key + "Nuke all\n" + \
+                  "🔰 " + key + "สปีท/Sp\n" + \
                   "🔰 " + key + "Sprespon\n" + \
                   "🔰 " + key + "แทค\n" + \
                   "🔰 " + key + "Byeme\n" + \
-                  "🔰 " + key + "Ginfo\n" + \
-                  "🔰 " + key + "Open\n" + \
-                  "🔰 " + key + "Close\n" + \
-                  "🔰 " + key + "Url grup\n" + \
-                  "🔰 " + key + "Reject\n" + \
-                  "🔰 " + key + "Gruplist\n" + \
+                  "🔰 " + key + "ข้อมูลกลุ่ม\n" + \
+                  "🔰 " + key + "เปิดลิ้ง\n" + \
+                  "🔰 " + key + "ปิดลิ้ง\n" + \
+                  "🔰 " + key + "ลิ้ง\n" + \
+                  "🔰 " + key + "ลบรัน\n" + \
+                  "🔰 " + key + "กลุ่มกู\n" + \
                   "🔰 " + key + "Infogrup「angka」\n" + \
                   "🔰 " + key + "Infomem「angka」\n" + \
-                  "🔰 " + key + "Remove chat\n" + \
-                  "🔰 " + key + "Lurking「on/off」\n" + \
-                  "🔰 " + key + "Lurkers\n" + \
-                  "🔰 " + key + "Sider「on/off」\n" + \
-                  "🔰 " + key + "Updatefoto\n" + \
-                  "🔰 " + key + "Updategrup\n" + \
-                  "🔰 " + key + "Broadcast:「Text」\n" + \
+                  "🔰 " + key + "ลบแชท\n" + \
+                  "🔰 " + key + "เปิดอ่าน/ปิดอ่าน\n" + \
+                  "🔰 " + key + "อ่าน\n" + \
+                  "🔰 " + key + "เปิดดูคนแอบ/ปิดดูคนแอบ\n" + \
+                  "🔰 " + key + "เปลี่ยนรูป\n" + \
+                  "🔰 " + key + "เปลี่ยนรูปกลุ่ม\n" + \
+                  "🔰 " + key + "ประกาศ:「ข้อความ」\n" + \
                   "🔰 " + key + "Setkey「New Key」\n" + \
                   "🔰 " + key + "Mykey\n" + \
                   "🔰 " + key + "Resetkey\n" + \
@@ -436,32 +436,32 @@ def help():
                   "🎭 " + key + "Profileig:「Nama IG」\n" + \
                   "🎭 " + key + "Cekig:「Nama IG」\n" + \
                   "🎭 " + key + "Cekdate:「tgl-bln-thn」\n" + \
-                  "🎭 " + key + "Spamtag:「jumlahnya」\n" + \
-                  "🎭 " + key + "Spamtag「@」\n" + \
-                  "🎭 " + key + "Spamcall:「jumlahnya」\n" + \
-                  "🎭 " + key + "Spamcall\n" + \
+                  "🎭 " + key + "แสปมแทค:「jumlahnya」\n" + \
+                  "🎭 " + key + "แสปมแทค「@」\n" + \
+                  "🎭 " + key + "แสปมคลอ:「jumlahnya」\n" + \
+                  "🎭 " + key + "แสปมคลอ\n" + \
                   "🎭 " + key + "ID line:「Id Line nya」\n" + \
                   "     Gunakan「 " + key + " 」Di Depannya\n" + \
                   "\n🔵 Settings" + "\n" + \
-                  "🎭 " + key + "Unsend「on/off」\n" + \
-                  "🎭 " + key + "Jointicket「on/off」\n" + \
-                  "🎭 " + key + "Sticker「on/off」\n" + \
-                  "🎭 " + key + "Respon「on/off」\n" + \
-                  "🎭 " + key + "Respongift「on/off」\n" + \
-                  "🎭 " + key + "Contact「on/off」\n" + \
-                  "🎭 " + key + "Autojoin「on/off」\n" + \
-                  "🎭 " + key + "Autoadd「on/off」\n" + \
-                  "🎭 " + key + "Welcome「on/off」\n" + \
+                  "🎭 " + key + "เปิด/ปิดยกเลิก「on/off」\n" + \
+                  "🎭 " + key + "เปิด/ปิดมุดลิ้ง\n" + \
+                  "🎭 " + key + "เปิด/ปิดสติกเกอร์\n" + \
+                  "🎭 " + key + "เปิด/ปิดแทค\n" + \
+                  "🎭 " + key + "เปิด/ปิดของขวัญ\n" + \
+                  "🎭 " + key + "เปิด/ปิดคท\n" + \
+                  "🎭 " + key + "เปิด/ปิดเข้ากลุ่ม\n" + \
+                  "🎭 " + key + "เปิด/ปิดบล็อค\n" + \
+                  "🎭 " + key + "คนเข้า เปิด/ปิด\n" + \
                   "🎭 " + key + "Simi「on/off」\n" + \
-                  "🎭 " + key + "Autoleave「on/off」\n" + \
+                  "🎭 " + key + "คนออก เปิด/ปิด\n" + \
                   "     Gunakan「 " + key + " 」Di Depannya\n" + \
                   "\n🔵 Admin" + "\n" + \
                   "🎭 " + key + "Changenamecreator:「Nama」\n" + \
                   "🎭 " + key + "Resetnamecreator\n" + \
-                  "🎭 " + key + "Admin:on\n" + \
+                  "🎭 " + key + "ตั้งแอด\n" + \
                   "🎭 " + key + "Admin:repeat\n" + \
-                  "🎭 " + key + "Adminadd「@」\n" + \
-                  "🎭 " + key + "Admindell「@」\n" + \
+                  "🎭 " + key + "ตั้งแอด「@」\n" + \
+                  "🎭 " + key + "ลบแอด「@」\n" + \
                   "🎭 " + key + "Refresh\n" + \
                   "🎭 " + key + "Listadmin\n" + \
                   "     Ketik「 Refresh 」Jika Sudah Menggunakan Command Diatas...\n" + \
@@ -476,24 +476,24 @@ def helarot():
     key2 = Setmain["namecreator"]
     key2 = key2.title()
     helpMessage1 ="🔰 NAME: "+ key2 +" 🔰" + "\n" + \
-                  "🔵 Help Bot" + "\n" + \
+                  "🔵 คำสั่ง2" + "\n" + \
                   "     Gunakan「 " + key + " 」Di Depannya\n" + \
                   "\n🔵 Menu" + "\n" + \
-                  "🔥 " + key + "Cek sider\n" + \
-                  "🔥 " + key + "Cek spam\n" + \
-                  "🔥 " + key + "Cek pesan\n" + \
-                  "🔥 " + key + "Cek respon\n" + \
-                  "🔥 " + key + "Cek welcome\n" + \
-                  "🔥 " + key + "Cek leave\n" + \
-                  "🔥 " + key + "Set sider:「Text」\n" + \
-                  "🔥 " + key + "Set spam:「Text」\n" + \
-                  "🔥 " + key + "Set pesan:「Text」\n" + \
-                  "🔥 " + key + "Set respon:「Text」\n" + \
-                  "🔥 " + key + "Set welcome:「Text」\n" + \
-                  "🔥 " + key + "Set leave:「Text」\n" + \
-                  "🔥 " + key + "Myname:「Nama」\n" + \
-                  "🔥 " + key + "Gift:「Mid korban」「Jumlah」\n" + \
-                  "🔥 " + key + "Spam:「Mid korban」「Jumlah」\n" + \
+                  "🔥 " + key + "เชคคนแอบ\n" + \
+                  "🔥 " + key + "เชคแสปม\n" + \
+                  "🔥 " + key + "เชคข้อความ\n" + \
+                  "🔥 " + key + "เชคแทค\n" + \
+                  "🔥 " + key + "เชคคนเข้า\n" + \
+                  "🔥 " + key + "เชคคนออก\n" + \
+                  "🔥 " + key + "ตั้งคนแอบ:「ข้อความ」\n" + \
+                  "🔥 " + key + "ตั้งแสปม:「ข้อความ」\n" + \
+                  "🔥 " + key + "ตั้งข้อความ:「ข้อความ」\n" + \
+                  "🔥 " + key + "ตั้งแทค:「ข้อความ」\n" + \
+                  "🔥 " + key + "ตั้งคนเข้า:「ข้อความ」\n" + \
+                  "🔥 " + key + "ตั้งคนออก:「ข้อความ」\n" + \
+                  "🔥 " + key + "เปลี่ยนชื่อ:「ข้อความ」\n" + \
+                  "🔥 " + key + "ของขวัญ:「Mid korban」「Jumlah」\n" + \
+                  "🔥 " + key + "แสปม:「Mid korban」「Jumlah」\n" + \
                   "     Ketik「 Refresh 」Jika Sudah Menggunakan Command Diatas...\n" + \
                   "\n🔐 USER:"+ key2 + "🔐"
     return helpMessage1
