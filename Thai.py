@@ -391,7 +391,7 @@ def help():
                   "🔰 " + key + "สปีท/Sp\n" + \
                   "🔰 " + key + "Sprespon\n" + \
                   "🔰 " + key + "แทค\n" + \
-                  "🔰 " + key + "Byeme\n" + \
+                  "🔰 " + key + "บาย\n" + \
                   "🔰 " + key + "ข้อมูลกลุ่ม\n" + \
                   "🔰 " + key + "เปิดลิ้ง\n" + \
                   "🔰 " + key + "ปิดลิ้ง\n" + \
@@ -1074,7 +1074,7 @@ def bot(op):
                         cmd = command(text)
                         if cmd == "คำสั่ง":
                           if wait["selfbot"] == True:
-                            if msg._from in group:
+                            if msg._from in admin:
                                helpMessage = help()
                                cl.sendMessage(msg.to, str(helpMessage))
                                cl.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
@@ -1091,20 +1091,20 @@ def bot(op):
 
                         elif cmd == "คำสั่ง2":
                           if wait["selfbot"] == True:
-                            if msg._from in group:
+                            if msg._from in admin:
                                helpMessage1 = helarot()
                                cl.sendMessage(msg.to, str(helpMessage1))
                                cl.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
  
                         elif cmd == "โปร":
                           if wait["selfbot"] == True:
-                            if msg._from in group:
+                            if msg._from in admin:
                                helpMessage2 = infomeme()
                                cl.sendMessage(msg.to, str(helpMessage2))
 
                         elif cmd == "คำสั่งแปล":
                           if wait["selfbot"] == True:
-                            if msg._from in group:
+                            if msg._from in admin:
                                helpTranslate = translate()
                                cl.sendMessage(msg.to, str(helpTranslate))
 
@@ -1172,7 +1172,7 @@ def bot(op):
                                 cl.sendMessage(msg.to, md+"-▬▬▬▬▬▬▬▬▬▬▬▬\n☬ Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n☬ Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n-▬▬▬▬▬▬▬▬▬▬▬▬")
 
                         elif cmd == "ผส" or text.lower() == 'creator':
-                            if msg._from in group:
+                            if msg._from in admin:
                                 cl.sendMessage(msg.to,"Creator Bot")
                                 ma = ""
                                 for i in admin:
@@ -1187,7 +1187,7 @@ def bot(op):
 
                         elif cmd == "คท" or text.lower() == 'me':
                           if wait["selfbot"] == True:
-                            if msg._from in group:
+                            if msg._from in admin:
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': msg._from}
                                cl.sendMessage1(msg)
@@ -1206,7 +1206,7 @@ def bot(op):
 
                         elif ("ข้อมูล " in msg.text):
                           if wait["selfbot"] == True:
-                            if msg._from in group:
+                            if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
                                mi = cl.getContact(key1)
@@ -1240,7 +1240,7 @@ def bot(op):
                                       cl.sendMessage(msg.to, "[ Display Name ]\n" + contact.displayName)
 
                         elif cmd.startswith("ตัส "):
-                            if msg._from in group:
+                            if msg._from in admin:
                               if 'MENTION' in msg.contentMetadata.keys()!= None:
                                   names = re.findall(r'@(\w+)', text)
                                   mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1254,7 +1254,7 @@ def bot(op):
                                       cl.sendMessage(msg.to, "[ Status Message ]\n{}" + contact.statusMessage)
 
                         elif cmd.startswith("รูป "):
-                            if msg._from in group:
+                            if msg._from in admin:
                                 if 'MENTION' in msg.contentMetadata.keys()!= None:
                                     names = re.findall(r'@(\w+)', text)
                                     mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1268,7 +1268,7 @@ def bot(op):
                                         cl.sendImageWithURL(msg.to, str(path))
 
                         elif cmd.startswith("ปก "):
-                            if msg._from in group:
+                            if msg._from in admin:
                                 if line != None:
                                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                                         names = re.findall(r'@(\w+)', text)
@@ -1325,7 +1325,7 @@ def bot(op):
 
                         elif cmd.startswith("ประกาศ: "):
                           if wait["selfbot"] == True:
-                            if msg._from in group:
+                            if msg._from in admin:
                                sep = text.split(" ")
                                pesan = text.replace(sep[0] + " ","")
                                saya = cl.getGroupIdsJoined()
@@ -1618,7 +1618,7 @@ def bot(op):
                                     mb += str(b) + ". " +cl.getContact(m_id).displayName + "\n"
                                 cl.sendMessage(msg.to,"💻 BOT admin\n\nAdmin:\n"+mb+"\nTotal「%s」Admin" %(str(len(admin))))
 
-                        elif cmd == "byeme":
+                        elif cmd == "บาย":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
@@ -1641,7 +1641,7 @@ def bot(op):
 
                         elif cmd == "สปีท" or cmd == "sp":
                           if wait["selfbot"] == True:
-                            if msg._from in group:
+                            if msg._from in admin:
                                start = time.time()
                                cl.sendMessage(msg.to, "Progres speed...")
                                elapsed_time = time.time() - start
@@ -1649,7 +1649,7 @@ def bot(op):
 
                         elif cmd == "เปิดอ่าน":
                           if wait["selfbot"] == True:
-                            if msg._from in group:
+                            if msg._from in admin:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
                                  Setmain['phreadPoint'][msg.to] = msg_id
@@ -1658,7 +1658,7 @@ def bot(op):
 
                         elif cmd == "ปิดอ่าน":
                           if wait["selfbot"] == True:
-                            if msg._from in group:
+                            if msg._from in admin:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
                                  del Setmain['phreadPoint'][msg.to]
@@ -1666,7 +1666,7 @@ def bot(op):
                                  cl.sendMessage(msg.to, "Lurking berhasil dinoaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
 
                         elif cmd == "อ่าน":
-                          if msg._from in group:
+                          if msg._from in admin:
                             if msg.to in Setmain['phreadPoint']:
                                 if Setmain['phreadMember'][msg.to] != {}:
                                     aa = []
