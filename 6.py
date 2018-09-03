@@ -723,6 +723,16 @@ def bot(op):
                     else:
                         cl.sendText(op.param1, wait["message"])
                         cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                        ki.sendText(op.param1, wait["message"])
+                        ki.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                        kk.sendText(op.param1, wait["message"])
+                        kk.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                        kc.sendText(op.param1, wait["message"])
+                        kc.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                        km.sendText(op.param1, wait["message"])
+                        km.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                        kb.sendText(op.param1, wait["message"])
+                        kb.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
         if op.type == 19:
             if op.param1 in protectkick:
