@@ -1326,9 +1326,11 @@ def bot(op):
                elif msg.text.lower() == "help":
                  if msg._from in owner or msg._from in admin or msg._from in group:
                      cl.sendMessage(msg.to, setowner)
+                     cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
                elif msg.text.lower() == "help2":
                  if msg._from in owner or msg._from in admin or msg._from in group:
                      cl.sendMessage(msg.to, setadmin)
+                     cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
                elif "Mid" == msg.text:
                    cl.sendMessage(msg.to, msg._from)
                elif ("Mid " in msg.text):
@@ -1380,6 +1382,7 @@ def bot(op):
                    if wait["detectMention"] == True: md+="╞☪ Autorespon「⚫」"
                    else: md+="╞☪ Autorespon「⚪」\n╰══════╬╬══════╯\n╭══════╬╬══════╮\n╞☪ sᴇᴛᴛɪɴɢ ᴘʀᴏᴛeᴄᴛɪᴏɴ\n╰══════╬╬══════╯"
                    cl.sendMessage(msg.to, md)
+                   cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
                elif text.lower() == 'listpro':
                  if msg._from in owner or msg._from in admin or msg._from in staff:
                    ma = ""
