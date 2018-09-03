@@ -103,7 +103,7 @@ helpMessage ="""╔═══════════════
 ╠❂➣ Join
 ╠❂➣ Byeall
 ╠❂➣ Leave all
-╠❂➣ Me leave
+╠❂➣ Unsend [on/off]
 ╠❂➣ Responsename
 ╚═══════════════
 ╔═══════════════
@@ -350,6 +350,7 @@ wait = {
     "welcomeOn":False,
     "sticker":False,
     "selfbot":True,
+    "unsend":True,
     "mention":"Masuk kuy awas dingin",
     "Respontag":"Njirrr tag pc napa",
     "welcome":"Wellcome to",
@@ -734,6 +735,66 @@ def bot(op):
                         kb.sendText(op.param1, wait["message"])
                         kb.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
+        if op.type == 65:
+            if wait["unsend"] == True:
+                try:
+                    at = op.param1
+                    msg_id = op.param2
+                    if msg_id in msg_dict:
+                        if msg_dict[msg_id]["from"]:
+                           if msg_dict[msg_id]["text"] == 'Gambarnya dibawah':
+                                ginfo = cl.getGroup(at)
+                                ariftj = cl.getContact(msg_dict[msg_id]["from"])
+                                zx = ""
+                                zxc = ""
+                                zx2 = []
+                                xpesan =  "「 Gambar Dihapus 」\n• Pengirim : "
+                                ret_ = "• Nama Grup : {}".format(str(ginfo.name))
+                                ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
+                                ry = str(ariftj.displayName)
+                                pesan = ''
+                                pesan2 = pesan+"@x \n"
+                                xlen = str(len(zxc)+len(xpesan))
+                                xlen2 = str(len(zxc)+len(pesan2)+len(xpesan)-1)
+                                zx = {'S':xlen, 'E':xlen2, 'M':ariftj.mid}
+                                zx2.append(zx)
+                                zxc += pesan2
+                                text = xpesan + zxc + ret_ + ""
+                                cl.sendMessage(at, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
+                                cl.sendImage(at, msg_dict[msg_id]["data"])
+                           else:
+                                ginfo = cl.getGroup(at)
+                                ariftj = cl.getContact(msg_dict[msg_id]["from"])
+                                ret_ =  "「 Pesan Dihapus 」\n"
+                                ret_ += "• Pengirim : {}".format(str(ariftj.displayName))
+                                ret_ += "\n• Nama Grup : {}".format(str(ginfo.name))
+                                ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
+                                ret_ += "\n• Pesannya : {}".format(str(msg_dict[msg_id]["text"]))
+                                cl.sendMessage(at, str(ret_))
+                        del msg_dict[msg_id]
+                except Exception as e:
+                    print(e)
+
+        if op.type == 65:
+            if wait["unsend"] == True:
+                try:
+                    at = op.param1
+                    msg_id = op.param2
+                    if msg_id in msg_dict1:
+                        if msg_dict1[msg_id]["from"]:
+                                ginfo = cl.getGroup(at)
+                                ariftj = cl.getContact(msg_dict1[msg_id]["from"])
+                                ret_ =  "「 Sticker Dihapus 」\n"
+                                ret_ += "• Pengirim : {}".format(str(ariftj.displayName))
+                                ret_ += "\n• Nama Grup : {}".format(str(ginfo.name))
+                                ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict1[msg_id]["createdTime"])))
+                                ret_ += "{}".format(str(msg_dict1[msg_id]["text"]))
+                                cl.sendMessage(at, str(ret_))
+                                cl.sendImage(at, msg_dict1[msg_id]["data"])
+                        del msg_dict1[msg_id]
+                except Exception as e:
+                    print(e)
+                    
         if op.type == 19:
             if op.param1 in protectkick:
                 if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
@@ -1335,6 +1396,14 @@ def bot(op):
                  if msg._from in owner or msg._from in admin or msg._from in group:
                      cl.sendMessage(msg.to, setadmin)
                      cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+               elif msg.text.lower() == "unsend on":
+                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                     wait["unsend"] = True
+                     cl.sendMessage(msg.to, "Deteksi Unsend Diaktifkan")
+               elif msg.text.lower() == "unsend off":
+                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                     wait["unsend"] = False
+                     cl.sendMessage(msg.to, "Deteksi Unsend Dinonaktifkan")
                elif "Mid" == msg.text:
                    cl.sendMessage(msg.to, msg._from)
                elif ("Mid " in msg.text):
