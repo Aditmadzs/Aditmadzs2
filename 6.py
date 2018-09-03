@@ -99,9 +99,9 @@ setowner ="""╭═══════╬╬════════╮
 ╞☪ Creator
 ╞☪ Settings
 ╞☪ Speed
-╞☪ Responsp
-╞☪ Panggil
-╞☪ Cabut.
+╞☪ Spb
+╞☪ Join
+╞☪ Byeall
 ╞☪ Leave all
 ╞☪ Me leave
 ╞☪ Responsename
@@ -721,7 +721,8 @@ def bot(op):
                     if (wait["message"] in [" "," ","\n",None]):
                         pass
                     else:
-                        addMembers(op.param1)
+                        cl.sendText(op.param1, wait["message"])
+                        cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
         if op.type == 19:
             if op.param1 in protectkick:
@@ -1313,10 +1314,10 @@ def bot(op):
                if text is None:
                    return
                elif msg.text.lower() == "help":
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                      cl.sendMessage(msg.to, setowner)
                elif msg.text.lower() == "help2":
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                      cl.sendMessage(msg.to, setadmin)
                elif "Mid" == msg.text:
                    cl.sendMessage(msg.to, msg._from)
@@ -1339,9 +1340,9 @@ def bot(op):
                         cl.sendVideoWithURL(msg.to, 'http://dl.profile.line.naver.jp'+foto_+'/vp.small')
                     else:
                         cl.sendImageWithURL(msg.to, 'http://dl.profile.line.naver.jp'+foto_)
-               elif text.lower() == 'settings':
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
-                   md = "╭═══════╬╬════════╮\n╞☪ sᴇᴛᴛɪɴɢ ᴘʀᴏ ʙᴏᴛ\n╰═══════╬╬════════╯\n╭═══════╬╬════════╮\n"
+               elif text.lower() == 'status':
+                 if msg._from in owner or msg._from in admin or msg._from in group:
+                   md = "╭══════╬╬══════╮\n╞☪ sᴇᴛᴛɪɴɢ ᴘʀᴏ ʙᴏᴛ\n╰══════╬╬══════╯\n╭══════╬╬══════╮\n"
                    if wait["sticker"] == True: md+="╞☪ Sticker「⚫」\n"
                    else: md+="╞☪ Sticker「⚪」\n"
                    if wait["contact"] == True: md+="╞☪ Contact「⚫」\n"
@@ -1367,7 +1368,7 @@ def bot(op):
                    if wait["autoLeave"] == True: md+="╞☪ Autoleave「⚫」\n"
                    else: md+="╞☪ Autoleave「⚪」\n"
                    if wait["detectMention"] == True: md+="╞☪ Autorespon「⚫」"
-                   else: md+="╞☪ Autorespon「⚪」\n╰═══════╬╬════════╯\n╭═══════╬╬════════╮\n╞☪ sᴇᴛᴛɪɴɢ ᴘʀᴏᴛeᴄᴛɪᴏɴ\n╰═══════╬╬════════╯"
+                   else: md+="╞☪ Autorespon「⚪」\n╰══════╬╬══════╯\n╭══════╬╬══════╮\n╞☪ sᴇᴛᴛɪɴɢ ᴘʀᴏᴛeᴄᴛɪᴏɴ\n╰══════╬╬══════╯"
                    cl.sendMessage(msg.to, md)
                elif text.lower() == 'listpro':
                  if msg._from in owner or msg._from in admin or msg._from in staff:
@@ -1430,7 +1431,7 @@ def bot(op):
                    if creator == []:
                         cl.sendMessage(msg.to,"Kosong")
                    else:
-                        cl.sendMessage(msg.to, "TΣΔM SLΔCҜβΩT")
+                        cl.sendMessage(msg.to, "【さัএπัஞ✵ບิथℓℓҨतΩ】")
                         h = ""
                         for i in creator:
                              h = cl.getContact(i)
@@ -1932,7 +1933,7 @@ def bot(op):
                    except Exception as e:
                        cl.sendMessage(msg.to, str(e))
                elif text.lower() == 'ginfo':
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                    try:
                        cname = cl.getGroup(msg.to)
                        cpic = cl.getGroup(msg.to)
@@ -1968,7 +1969,7 @@ def bot(op):
                    cl.updateGroup(X)
                    cl.sendMessage(msg.to, "Url Closed")
                elif text.lower() == 'url':
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                   if msg.toType == 2:
                    x = cl.getGroup(msg.to)
                    ginfo = cl.getGroup(msg.to)
@@ -2022,7 +2023,7 @@ def bot(op):
                         kb.sendText(msg.to,"Update name " + string + " done")
 #===================BOT NAME====================#
                elif "/ti/g/" in msg.text.lower():
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                   if settings["autoJoinTicket"] == True:
                     link_re = re.compile('(?:line\:\/|line\.me\/R)\/ti\/g\/([a-zA-Z0-9_-]+)?')
                     links = link_re.findall(text)
@@ -2069,7 +2070,7 @@ def bot(op):
                        cl.sendMessage(msg.to, "http://line.me/ti/p/~" + msgs)
                        cl.sendMessage(msg.to, None, contentMetadata={'mid': conn.mid}, contentType=13)
                elif "Gift: " in msg.text:
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                    korban = msg.text.replace("Gift: ","")
                    korban2 = korban.split()
                    midd = korban2[0]
@@ -2083,7 +2084,7 @@ def bot(op):
                             km.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
                             kb.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
                elif "Spam: " in msg.text:
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                    korban = msg.text.replace("Spam: ","")
                    korban2 = korban.split()
                    midd = korban2[0]
@@ -2099,10 +2100,10 @@ def bot(op):
                  if msg._from in Saints:
                    cl.sendMessage(msg.to, None, contentMetadata={'mid': "12345,'"}, contentType=13)
                elif text.lower() == 'me':
-                 if msg._from in Saints:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                    cl.sendMessage(msg.to, None, contentMetadata={'mid': sender}, contentType=13)
                elif text.lower() == 'mybot':
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                    cl.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
                    cl.sendMessage(msg.to, None, contentMetadata={'mid': Amid}, contentType=13)
                    cl.sendMessage(msg.to, None, contentMetadata={'mid': Bmid}, contentType=13)
@@ -2291,19 +2292,19 @@ def bot(op):
                                 get_contact_time = time.time() - get_contact_time_start
                                 cl.sendMessage(msg.to, "۞➢[ ResponSpeed ]\n\n - ۞➢Speed Profile\n   %.10f\n - ۞➢Speed Contact\n   %.10f\n - ۞➢Speed Group\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
                elif text.lower() == 'sp':
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                     speed = "0.00072476863861083984 Detik","0.00066165924072265625 Detik","0.0006737709045410156 Detik","0.0005425930023193359 Detik","0.006354093551635742 Detik","0.00064165592193603516 Detik","0.000640559196472168 Detik","0.0007369041442871094 Detik","0.0017087697982788086 Detik","0.00075762271881103516 Detik","0.00069200992584228516 Detik","0.0011708498001098633 Detik"
                     text = random.choice(speed)
                     cl.sendMessage(msg.to, "Proges speed...")
                     cl.sendMessage(msg.to, str(text))
                elif text.lower() == 'speed':
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                     speed = "0.00072476863861083984 Detik","0.00066165924072265625 Detik","0.0006737709045410156 Detik","0.0005425930023193359 Detik","0.0006354093551635742 Detik","0.00064165592193603516 Detik","0.000640559196472168 Detik","0.0007369041442871094 Detik","0.0017087697982788086 Detik","0.00075762271881103516 Detik","0.00069200992584228516 Detik","0.0011708498001098633 Detik"
                     text = random.choice(speed)
                     cl.sendMessage(msg.to, "Progres speed...")
                     cl.sendMessage(msg.to, str(text))
-               elif text.lower() == 'sp1':
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+               elif text.lower() == 'spb':
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                     speed = "0.00072476863861083984 Detik","0.00066165924072265625 Detik","0.0006737709045410156 Detik","0.0005425930023193359 Detik","0.0006354093551635742 Detik","0.00064165592193603516 Detik","0.000640559196472168 Detik","0.0007369041442871094 Detik","0.0017087697982788086 Detik","0.00075762271881103516 Detik","0.00069200992584228516 Detik","0.011708498001098633 Detik","0.0006253678219877442 Detik","0.0007625273849272546 Detik","0.0086472849755484988 Detik","0.00067263637228007213 Detik","0.001087462546489230 Detik","0.000673728994432870 Detik","0.000609286451538291 Detik","0.001087462684911508 Detik"
                     speed1 = "0.0007153511047363281 Detik","0.0007079362869262695 Detik","0.0075762271881103516 Detik","0.0069200992584228516 Detik","0.00862581973667200 Detik","0.007203102111816406 Detik","0.008542300881153976 Detik","0.007643579108376799 Detik","0.006739908765524177 Detik","0.007546262829033837 Detik","0.017087697982788086 Detik","0.019716978073120117 Detik","0.0072476863861083984 Detik","0.0066165924072265625 Detik","0.006737709045410156 Detik","0.005425930023193359 Detik","0.006354093551635742 Detik","0.0064165592193603516 Detik","0.00640559196472168 Detik","0.007369041442871094 Detik","0.017087697982788086 Detik","0.0075762271881103516 Detik","0.0069200992584228516 Detik","0.011708498001098633 Detik"
                     speed2 = "0.006253678219877442 Detik","0.007625273849272546 Detik","0.0086472849755484988 Detik","0.0067263637228007213 Detik","0.01087462546489270 Detik","0.006737289944328470 Detik","0.006092864515382911 Detik","0.010874626849115083 Detik","0.007274839010557822 Detik","0.0072476863861083984 Detik","0.0066165924072265625 Detik","0.006737709045410156 Detik","0.005425930023193359 Detik","0.006354093551635742 Detik","0.0064165592193603516 Detik","0.00640559196472168 Detik","0.007369041442871094 Detik","0.017087697982788086 Detik","0.0075762271881103516 Detik","0.0069200992584228516 Detik","0.011708498001098633 Detik"
@@ -2567,6 +2568,11 @@ def bot(op):
                    ragets = cl.getContacts(wait["blacklist"])
                    mc = "۞➢「%i」User Blacklist" % len(ragets)
                    cl.sendMessage(msg.to,"Succes Clearban " +mc)
+                   ki.sendMessage(msg.to,"Succes Clearban " +mc)
+                   kk.sendMessage(msg.to,"Succes Clearban " +mc)
+                   kc.sendMessage(msg.to,"Succes Clearban " +mc)
+                   km.sendMessage(msg.to,"Succes Clearban " +mc)
+                   kb.sendMessage(msg.to,"Succes Clearban " +mc)
                elif text.lower() == 'talkban:on':
                  if msg._from in owner or msg._from in admin:
                    wait["Talkwblacklist"] = True
@@ -2620,7 +2626,7 @@ def bot(op):
                        mc += "\n\n۞➢「%i」User Blacklist" % len(ragets)
                        cl.sendMessage(msg.to, mc)
                elif text.lower() == 'blc':
-                 if msg._from in owner or msg._from in admin or msg._from in staff:
+                 if msg._from in owner or msg._from in admin or msg._from in group:
                      if wait["blacklist"] == {}:
                          cl.sendMessage(msg.to, "No blacklist")
                      else:
