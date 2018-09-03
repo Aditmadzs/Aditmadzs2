@@ -83,91 +83,91 @@ responsename3 = kc.getProfile().displayName
 responsename4 = km.getProfile().displayName
 responsename5 = kb.getProfile().displayName
 
-setowner ="""╭══════╬╬═══════╮
-╞☪【さัএπัஞ✵ບิथℓℓҨतΩ】
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
-╞☪ Me
-╞☪ Mid
-╞☪ Mid [@]
-╞☪ Like [@]
-╞☪ Url
-╞☪ Open
-╞☪ Close
-╞☪ Ginfo
-╞☪ Kiss
-╞☪ Creator
-╞☪ Settings
-╞☪ Speed
-╞☪ Spb
-╞☪ Join
-╞☪ Byeall
-╞☪ Leave all
-╞☪ Me leave
-╞☪ Responsename
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
-╞☪ ᴀᴅᴍɪɴ ᴍᴇɴᴜ 
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
-╞☪ Kick [@]
-╞☪ Kamu [@]
-╞☪ Mayhem
-╞☪ Blc
-╞☪ Ban [@]
-╞☪ Unban [@]
-╞☪ Ban:on/off
-╞☪ Unban:on/off
-╞☪ Banlist
-╞☪ Clearban
-╞☪ Glist
-╞☪ Friendlist
-╞☪ B1: [Text]
-╞☪ B2: [Text]
-╞☪ B3: [Text]
-╞☪ B4: [Text]
-╞☪ B5: [Text]
-╞☪ Myname: [Text]
-╞☪ Restart
-╞☪ Informasi
-╞☪ Bot upicture
-╞☪ Group upicture
-╞☪ Me upicture
-╞☪ Remove
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
-╞☪ sᴇᴛᴛɪɴɢ ᴍᴇɴᴜ 
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
-╞☪ Sider on/off
-╞☪ Lurking on/off
-╞☪ Lurkers
-╞☪ Cek sider
-╞☪ Cek spam
-╞☪ Cek pesan
-╞☪ Cek respon
-╞☪ Cek welcome
-╞☪ Set sider: [Text]
-╞☪ Set spam: [Text]
-╞☪ Set pesan: [Text]
-╞☪ Set respon: [Text]
-╞☪ Set welcome: [Text]
-╞☪ Sticker on/off
-╞☪ Contact on/off
-╞☪ Autojoin on/off
-╞☪ Autoadd on/off
-╞☪ Autoleave on/off
-╞☪ Welcome on/off
-╞☪ Autorespon on/off
-╞☪ Gift: [Mid] [Jumlah]
-╞☪ Spam: [Mid] [Jumlah]
-╰══════╬╬═══════╯
+helpMessage ="""╔═══════════════
+╠❂➣【さัএπัஞ✵ບิथℓℓҨतΩ】
+╚═══════════════
+╔═══════════════
+╠❂➣ Me
+╠❂➣ Mid
+╠❂➣ Mid [@]
+╠❂➣ Like [@]
+╠❂➣ Url
+╠❂➣ Open
+╠❂➣ Close
+╠❂➣ Ginfo
+╠❂➣ Kiss
+╠❂➣ Creator
+╠❂➣ Settings
+╠❂➣ Speed
+╠❂➣ Spb
+╠❂➣ Join
+╠❂➣ Byeall
+╠❂➣ Leave all
+╠❂➣ Me leave
+╠❂➣ Responsename
+╚═══════════════
+╔═══════════════
+╠❂➣ ᴀᴅᴍɪɴ ᴍᴇɴᴜ 
+╚═══════════════
+╔═══════════════
+╠❂➣ Kick [@]
+╠❂➣ Kamu [@]
+╠❂➣ Mayhem
+╠❂➣ Blc
+╠❂➣ Ban [@]
+╠❂➣ Unban [@]
+╠❂➣ Ban:on/off
+╠❂➣ Unban:on/off
+╠❂➣ Banlist
+╠❂➣ Clearban
+╠❂➣ Glist
+╠❂➣ Friendlist
+╠❂➣ B1: [Text]
+╠❂➣ B2: [Text]
+╠❂➣ B3: [Text]
+╠❂➣ B4: [Text]
+╠❂➣ B5: [Text]
+╠❂➣ Myname: [Text]
+╠❂➣ Restart
+╠❂➣ Informasi
+╠❂➣ Bot upicture
+╠❂➣ Group upicture
+╠❂➣ Me upicture
+╠❂➣ Remove
+╚═══════════════
+╔══════╬╬═══════
+╠❂➣ sᴇᴛᴛɪɴɢ ᴍᴇɴᴜ 
+╚══════╬╬═══════
+╔══════╬╬═══════
+╠❂➣ Sider on/off
+╠❂➣ Lurking on/off
+╠❂➣ Lurkers
+╠❂➣ Cek sider
+╠❂➣ Cek spam
+╠❂➣ Cek pesan
+╠❂➣ Cek respon
+╠❂➣ Cek welcome
+╠❂➣ Set sider: [Text]
+╠❂➣ Set spam: [Text]
+╠❂➣ Set pesan: [Text]
+╠❂➣ Set respon: [Text]
+╠❂➣ Set welcome: [Text]
+╠❂➣ Sticker on/off
+╠❂➣ Contact on/off
+╠❂➣ Autojoin on/off
+╠❂➣ Autoadd on/off
+╠❂➣ Autoleave on/off
+╠❂➣ Welcome on/off
+╠❂➣ Autorespon on/off
+╠❂➣ Gift: [Mid] [Jumlah]
+╠❂➣ Spam: [Mid] [Jumlah]
+╚═══════════════
 """
 
-helpMessage ="""╭══════╬╬═══════╮
-╞☪【さัএπัஞ✵ບิथℓℓҨतΩ】
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
+setowner ="""╔═══════════════
+╠❂➣【さัএπัஞ✵ບิथℓℓҨतΩ】
+╚═══════════════
+╔═══════════════
 ╞☪ Me
 ╞☪ Mid
 ╞☪ Mid [@]
@@ -190,11 +190,11 @@ helpMessage ="""╭══════╬╬═══════╮
 ╞☪ Kick [@]
 ╞☪ Kamu [@]
 ╞☪ Mayhem
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
+╰═══════════════
+╭═══════════════
 ╞☪ ᴄᴏᴍᴍᴀɴᴅ ʙʟᴀᴄᴋʟɪsᴛ
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
+╰═══════════════
+╭═══════════════
 ╞☪ Blc
 ╞☪ Ban [@]
 ╞☪ Unban [@]
@@ -205,11 +205,11 @@ helpMessage ="""╭══════╬╬═══════╮
 ╞☪ Glist
 ╞☪ Friendlist
 ╞☪ Restart
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
+╰═══════════════
+╭═══════════════
 ╞☪ ɪɴғᴏ ᴍᴇɴᴜ βΩT
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
+╰═══════════════
+╭═══════════════
 ╞☪ Informasi
 ╞☪ Bot upicture
 ╞☪ Group upicture
@@ -233,13 +233,13 @@ helpMessage ="""╭══════╬╬═══════╮
 ╞☪ Autoleave on/off
 ╞☪ Welcome on/off
 ╞☪ Autorespon on/off
-╰══════╬╬═══════╯
+╰═══════════════
 """
 
-setadmin ="""╭══════╬╬═══════╮
+setadmin ="""╭═══════════════
 ╞☪ ᴍᴇɴᴜ sᴘᴇsɪᴀʟ
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
+╰═══════════════
+╭═══════════════
 ╞☪ Staff:on/off
 ╞☪ Staff add [@]
 ╞☪ Staff dell [@]
@@ -259,11 +259,11 @@ setadmin ="""╭══════╬╬═══════╮
 ╞☪ Talkdell [@]
 ╞☪ Refresh
 ╞☪ Adminlist
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
+╰═══════════════
+╭═══════════════
 ╞☪【さัএπัஞ✵ບิथℓℓҨतΩ】
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
+╰═══════════════
+╭═══════════════
 ╞☪ Ntag on/off
 ╞☪ Nkick on/off
 ╞☪ Njoin on/off
@@ -271,11 +271,11 @@ setadmin ="""╭══════╬╬═══════╮
 ╞☪ Block url on/off
 ╞☪ Allprotect on/off
 ╞☪ Listpro
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
+╰═══════════════
+╭═══════════════
 ╞☪【さัএπัஞ✵ບิथℓℓҨतΩ】
-╰══════╬╬═══════╯
-╭══════╬╬═══════╮
+╰═══════════════
+╭═══════════════
 ╞☪ .cek grup [@]
 ╞☪ .ginfo: [Nomer]
 ╞☪ .listmem: [Nomer]
@@ -289,7 +289,7 @@ setadmin ="""╭══════╬╬═══════╮
 ╞☪ .video: [Penyanyi - judul]
 ╞☪ .cek cuaca: [Nama kota]
 ╞☪ .jadwal sholat [Nama kota]
-╰══════╬╬═══════╯
+╰═══════════════
 """
 settings = {
     "Picture":False,
@@ -1325,9 +1325,13 @@ def bot(op):
                    return
                elif msg.text.lower() == "help":
                  if msg._from in owner or msg._from in admin or msg._from in group:
-                     cl.sendMessage(msg.to, setowner)
+                     cl.sendMessage(msg.to, helpMessage)
                      cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
                elif msg.text.lower() == "help2":
+                 if msg._from in owner or msg._from in admin or msg._from in group:
+                     cl.sendMessage(msg.to, setowner)
+                     cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+               elif msg.text.lower() == "help3":
                  if msg._from in owner or msg._from in admin or msg._from in group:
                      cl.sendMessage(msg.to, setadmin)
                      cl.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
