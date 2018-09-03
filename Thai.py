@@ -22,10 +22,10 @@ call = cl
 
 mid = cl.getProfile().mid
 
-admin = ["u6c6a0dba35103c48bdaae35c21750b14","u4862fe4b182b2fd194a3108e2f3662e8"]
+admin = ["u4862fe4b182b2fd194a3108e2f3662e8"]
 
 KAC = [cl]
-Bots = ["u6c6a0dba35103c48bdaae35c21750b14","u4862fe4b182b2fd194a3108e2f3662e8"]
+Bots = ["u4862fe4b182b2fd194a3108e2f3662e8"]
 Phie = admin
 
 welcome = []
@@ -1124,30 +1124,30 @@ def bot(op):
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
                                 md = "-▬▬▬▬▬▬▬▬▬▬▬▬\n          🔰 S T A T U S 🔰\n-▬▬▬▬▬▬▬▬▬▬▬▬\n"
-                                if wait["unsend"] == True: md+="🔊 Unsend「ON」\n"
-                                else: md+="🔇 Unsend「OFF」\n"
-                                if wait["sticker"] == True: md+="🔊 Sticker「ON」\n"
-                                else: md+="🔇 Sticker「OFF」\n"
-                                if wait["contact"] == True: md+="🔊 Contact「ON」\n"
-                                else: md+="🔇 Contact「OFF」\n"
-                                if wait["Mentionkick"] == True: md+="🔊 Notag「ON」\n"
-                                else: md+="🔇 Notag「OFF」\n"
-                                if wait["detectMention"] == True: md+="🔊 Respon「ON」\n"
-                                else: md+="🔇 Respon「OFF」\n"
-                                if wait["Mentiongift"] == True: md+="🔊 Respongift「ON」\n"
-                                else: md+="🔇 Respongift「OFF」\n"
-                                if wait["autoJoin"] == True: md+="🔊 Autojoin「ON」\n"
-                                else: md+="🔇 Autojoin「OFF」\n"
-                                if settings["autoJoinTicket"] == True: md+="🔊 Join Ticket「ON」\n"
-                                else: md+="🔇 Join Ticket「OFF」\n"
+                                if wait["unsend"] == True: md+="🔊 ยกเลิก「เปิด」\n"
+                                else: md+="🔇 ยกเลิก「ปิด」\n"
+                                if wait["sticker"] == True: md+="🔊 สติกเกอร์「เปิด」\n"
+                                else: md+="🔇 สติกเกอร์「ปิด」\n"
+                                if wait["contact"] == True: md+="🔊 คท「เปิด」\n"
+                                else: md+="🔇 คท「ปิด」\n"
+                                if wait["Mentionkick"] == True: md+="🔊 แตะแทค「เปิด」\n"
+                                else: md+="🔇 เตะแทค「ปิด」\n"
+                                if wait["detectMention"] == True: md+="🔊 แทค「เปิด」\n"
+                                else: md+="🔇 แทค「ปิด」\n"
+                                if wait["Mentiongift"] == True: md+="🔊 ของขวัญ「เปิด」\n"
+                                else: md+="🔇 ของขวัญ「ปิด」\n"
+                                if wait["autoJoin"] == True: md+="🔊 เข้ากลุ่ม「เปิด」\n"
+                                else: md+="🔇 เข้ากลุ่ม「ปิด」\n"
+                                if settings["autoJoinTicket"] == True: md+="🔊 มุดลิ้ง「เปิด」\n"
+                                else: md+="🔇 มุดลิ้ง「ปิด」\n"
                                 if msg.to in simisimi: md+="🔊 Simisimi「ON」\n"
                                 else: md+="🔇 Simisimi「OFF」\n"
-                                if wait["autoAdd"] == True: md+="🔊 Autoadd「ON」\n"
-                                else: md+="🔇 Autoadd「OFF」\n"
-                                if msg.to in welcome: md+="🔊 Welcome「ON」\n"
-                                else: md+="🔇 Welcome「OFF」\n"
-                                if wait["autoLeave"] == True: md+="🔊 Autoleave「ON」\n"
-                                else: md+="🔇 Autoleave「OFF」\n"
+                                if wait["autoAdd"] == True: md+="🔊 บล็อค「เปิด」\n"
+                                else: md+="🔇 บล็อค「ปิด」\n"
+                                if msg.to in welcome: md+="🔊 คนเข้า「เปิด」\n"
+                                else: md+="🔇 คนเข้า「ปิด」\n"
+                                if wait["autoLeave"] == True: md+="🔊 คนออก「เปิด」\n"
+                                else: md+="🔇 คนออก「ปิด」\n"
                                 cl.sendMessage(msg.to, md+"-▬▬▬▬▬▬▬▬▬▬▬▬\n☬ Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n☬ Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n-▬▬▬▬▬▬▬▬▬▬▬▬")
                                 cl.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
       
