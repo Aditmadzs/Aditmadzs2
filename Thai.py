@@ -387,7 +387,7 @@ def help():
                   "🔰 " + key + "รีบูส\n" + \
                   "🔰 " + key + "ออน\n" + \
                   "🔰 " + key + "ผส\n" + \
-                  "🔰 " + key + "Nuke all\n" + \
+                  "🔰 " + key + "ปลิว 「@」\n" + \
                   "🔰 " + key + "สปีท/Sp\n" + \
                   "🔰 " + key + "Sprespon\n" + \
                   "🔰 " + key + "แทค\n" + \
@@ -436,8 +436,8 @@ def help():
                   "🎭 " + key + "Profileig:「Nama IG」\n" + \
                   "🎭 " + key + "Cekig:「Nama IG」\n" + \
                   "🎭 " + key + "Cekdate:「tgl-bln-thn」\n" + \
-                  "🎭 " + key + "แสปมแทค:「jumlahnya」\n" + \
-                  "🎭 " + key + "แสปมแทค「@」\n" + \
+                  "🎭 " + key + "แทค:「jumlahnya」\n" + \
+                  "🎭 " + key + "แทค「@」\n" + \
                   "🎭 " + key + "แสปมคลอ:「jumlahnya」\n" + \
                   "🎭 " + key + "แสปมคลอ\n" + \
                   "🎭 " + key + "ID line:「Id Line nya」\n" + \
@@ -451,19 +451,19 @@ def help():
                   "🎭 " + key + "เปิด/ปิดคท\n" + \
                   "🎭 " + key + "เปิด/ปิดเข้ากลุ่ม\n" + \
                   "🎭 " + key + "เปิด/ปิดบล็อค\n" + \
-                  "🎭 " + key + "คนเข้า เปิด/ปิด\n" + \
-                  "🎭 " + key + "Simi「on/off」\n" + \
+                  "🎭 " + key + "ต้อนรับ เปิด/ปิด\n" + \
+                  "🎭 " + key + "cctv「on/off」\n" + \
                   "🎭 " + key + "คนออก เปิด/ปิด\n" + \
                   "     Gunakan「 " + key + " 」Di Depannya\n" + \
                   "\n🔵 Admin" + "\n" + \
-                  "🎭 " + key + "Changenamecreator:「Nama」\n" + \
-                  "🎭 " + key + "Resetnamecreator\n" + \
-                  "🎭 " + key + "ตั้งแอด\n" + \
-                  "🎭 " + key + "Admin:repeat\n" + \
-                  "🎭 " + key + "ตั้งแอด「@」\n" + \
-                  "🎭 " + key + "ลบแอด「@」\n" + \
-                  "🎭 " + key + "Refresh\n" + \
-                  "🎭 " + key + "Listadmin\n" + \
+                  "🎭 " + key + "fuck@sirichan\n" + \
+                  "🎭 " + key + "broken\n" + \
+                  "🎭 " + key + "Selam canım\n" + \
+                  "🎭 " + key + "ตั้งแอดมิน\n" + \
+                  "🎭 " + key + "ตั้งแอดมิน「@」\n" + \
+                  "🎭 " + key + "ลบแอดมิน「@」\n" + \
+                  "🎭 " + key + "ตั้งคทแอด\n" + \
+                  "🎭 " + key + "ยกเลิกทั้งหมด\n" + \
                   "     Ketik「 Refresh 」Jika Sudah Menggunakan Command Diatas...\n" + \
                   "\n🔐 USER BY:"+ key2 + "🔐"
     return helpMessage
@@ -1187,7 +1187,7 @@ def bot(op):
 
                         elif cmd == "คท" or text.lower() == 'me':
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            if msg._from in group:
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': msg._from}
                                cl.sendMessage1(msg)
@@ -1206,7 +1206,7 @@ def bot(op):
 
                         elif ("ข้อมูล " in msg.text):
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            if msg._from in group:
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
                                mi = cl.getContact(key1)
@@ -1240,7 +1240,7 @@ def bot(op):
                                       cl.sendMessage(msg.to, "[ Display Name ]\n" + contact.displayName)
 
                         elif cmd.startswith("ตัส "):
-                            if msg._from in admin:
+                            if msg._from in group:
                               if 'MENTION' in msg.contentMetadata.keys()!= None:
                                   names = re.findall(r'@(\w+)', text)
                                   mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1254,7 +1254,7 @@ def bot(op):
                                       cl.sendMessage(msg.to, "[ Status Message ]\n{}" + contact.statusMessage)
 
                         elif cmd.startswith("รูป "):
-                            if msg._from in admin:
+                            if msg._from in group:
                                 if 'MENTION' in msg.contentMetadata.keys()!= None:
                                     names = re.findall(r'@(\w+)', text)
                                     mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1268,7 +1268,7 @@ def bot(op):
                                         cl.sendImageWithURL(msg.to, str(path))
 
                         elif cmd.startswith("ปก "):
-                            if msg._from in admin:
+                            if msg._from in group:
                                 if line != None:
                                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                                         names = re.findall(r'@(\w+)', text)
@@ -1325,7 +1325,7 @@ def bot(op):
 
                         elif cmd.startswith("ประกาศ: "):
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            if msg._from in group:
                                sep = text.split(" ")
                                pesan = text.replace(sep[0] + " ","")
                                saya = cl.getGroupIdsJoined()
@@ -1641,7 +1641,7 @@ def bot(op):
 
                         elif cmd == "สปีท" or cmd == "sp":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            if msg._from in group:
                                start = time.time()
                                cl.sendMessage(msg.to, "Progres speed...")
                                elapsed_time = time.time() - start
@@ -1649,7 +1649,7 @@ def bot(op):
 
                         elif cmd == "เปิดอ่าน":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            if msg._from in group:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
                                  Setmain['phreadPoint'][msg.to] = msg_id
@@ -1658,7 +1658,7 @@ def bot(op):
 
                         elif cmd == "ปิดอ่าน":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            if msg._from in group:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
                                  del Setmain['phreadPoint'][msg.to]
@@ -1666,7 +1666,7 @@ def bot(op):
                                  cl.sendMessage(msg.to, "Lurking berhasil dinoaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
 
                         elif cmd == "อ่าน":
-                          if msg._from in admin:
+                          if msg._from in group:
                             if msg.to in Setmain['phreadPoint']:
                                 if Setmain['phreadMember'][msg.to] != {}:
                                     aa = []
@@ -3556,7 +3556,7 @@ def bot(op):
                                for target in targets:
                                        try:
                                            admin.append(target)
-                                           cl.sendMessage(msg.to,"Berhasil menambahkan admin")
+                                           cl.sendMessage(msg.to,"ตั้งแอดเรียบร้อย 🔰")
                                        except:
                                            pass
 
@@ -3571,7 +3571,7 @@ def bot(op):
                                    #if target not in Arif:
                                        try:
                                            admin.remove(target)
-                                           cl.sendMessage(msg.to,"Berhasil menghapus admin")
+                                           cl.sendMessage(msg.to,"ลบแล้ว 🔰")
                                        except:
                                            pass
 
