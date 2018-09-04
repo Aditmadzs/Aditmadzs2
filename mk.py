@@ -1170,7 +1170,7 @@ def bot(op):
                                         try:
                                             ki.inviteIntoGroup(op.param1,[op.param3])
                                             ke.acceptGroupInvitation(op.param1)
-                                            ki.kickoutFromGroup(op.param1,[op.param2])
+                                            kk.kickoutFromGroup(op.param1,[op.param2])
                                         except:
                                             try:
                                                 kk.inviteIntoGroup(op.param1,[op.param3])
@@ -1182,7 +1182,12 @@ def bot(op):
                                                     ke.acceptGroupInvitation(op.param1)
                                                     kc.kickoutFromGroup(op.param1,[op.param2])
                                                 except:
-                                                    pass
+                                                    try:
+                                                        kc.inviteIntoGroup(op.param1,[op.param3])
+                                                        ke.acceptGroupInvitation(op.param1)
+                                                        kc.kickoutFromGroup(op.param1,[op.param2])
+                                                    except:
+                                                        pass
                 return
 
             if admin in op.param3:
@@ -1251,7 +1256,12 @@ def bot(op):
                                 kc.inviteIntoGroup(op.param1,staff)
                                 kc.kickoutFromGroup(op.param1,[op.param2])
                             except:
-                                pass
+                                try:
+                                    ke.findAndAddContactsByMid(op.param1,staff)
+                                    ke.inviteIntoGroup(op.param1,staff)
+                                    ke.kickoutFromGroup(op.param1,[op.param2])
+                                except:
+                                    pass
 
                 return
 
@@ -1366,8 +1376,8 @@ def bot(op):
                    mentionees = mention['MENTIONEES']
                    for mention in mentionees:
                         if mention ['M'] in Bots:
-                           cl.sendMessage(msg.to, wait["Respontag"])
-                           cl.sendMessage(msg.to, None, contentMetadata={"STKID":"21715710","STKPKGID":"9662","STKVER":"2"}, contentType=7)
+                           aditmadzs.sendMessage(msg.to, wait["Respontag"])
+                           aditmadzs.sendMessage(msg.to, None, contentMetadata={"STKID":"21715710","STKPKGID":"9662","STKVER":"2"}, contentType=7)
                            break
                if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["Mentiongift"] == True:
@@ -1380,8 +1390,8 @@ def bot(op):
                            plihth = random.choice(idth)
                            jenis = ["5","6","7","8"]
                            plihjenis = random.choice(jenis)
-                           cl.sendMessage(msg.to, "Ye ngetag ngetag, lu minta digift ya? cek PersonalChat bos, udah gue gift tuh. Jangan lupa bilang makasih yak!")
-                           cl.sendMessage(msg._from, None, contentMetadata={"PRDID":plihth,"PRDTYPE":"THEME","MSGTPL":plihjenis}, contentType=9)
+                           aditmadzs.sendMessage(msg.to, "Ye ngetag ngetag, lu minta digift ya? cek PersonalChat bos, udah gue gift tuh. Jangan lupa bilang makasih yak!")
+                           aditmadzs.sendMessage(msg._from, None, contentMetadata={"PRDID":plihth,"PRDTYPE":"THEME","MSGTPL":plihjenis}, contentType=9)
                            break                       
                if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["Mentionkick"] == True:
@@ -1390,13 +1400,13 @@ def bot(op):
                    mentionees = mention['MENTIONEES']
                    for mention in mentionees:
                         if mention ['M'] in Bots:
-                           cl.sendMessage(msg.to, "Jangan tag saya....")
-                           cl.kickoutFromGroup(msg.to, [msg._from])
+                           aditmadzs.sendMessage(msg.to, "Jangan tag saya....")
+                           aditmadzs.kickoutFromGroup(msg.to, [msg._from])
                            break
                if msg.contentType == 7:
                  if wait["sticker"] == True:
                     msg.contentType = 0
-                    cl.sendMessage(msg.to,"「Cek ID Sticker」\n🐚 STKID : " + msg.contentMetadata["STKID"] + "\n🐚 STKPKGID : " + msg.contentMetadata["STKPKGID"] + "\n🐚 STKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
+                    aditmadzs.sendMessage(msg.to,"「Cek ID Sticker」\n🐚 STKID : " + msg.contentMetadata["STKID"] + "\n🐚 STKPKGID : " + msg.contentMetadata["STKPKGID"] + "\n🐚 STKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
                if msg.contentType == 13:
                  if wait["contact"] == True:
                     msg.contentType = 0
@@ -1405,8 +1415,8 @@ def bot(op):
                         contact = cl.getContact(msg.contentMetadata["mid"])
                         path = cl.getContact(msg.contentMetadata["mid"]).picturePath
                         image = 'http://dl.profile.line.naver.jp'+path
-                        cl.sendMessage(msg.to,"⏩ Nama: " + msg.contentMetadata["displayName"] + "\n⏩ MID: " + msg.contentMetadata["mid"] + "\n⏩ Status: " + contact.statusMessage + "\n⏩ Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
-                        cl.sendImageWithURL(msg.to, image)
+                        aditmadzs.sendMessage(msg.to,"⏩ Nama: " + msg.contentMetadata["displayName"] + "\n⏩ MID: " + msg.contentMetadata["mid"] + "\n⏩ Status: " + contact.statusMessage + "\n⏩ Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
+                        aditmadzs.sendImageWithURL(msg.to, image)
 
         if op.type == 25 or op.type == 26:
             msg = op.message
@@ -1573,6 +1583,11 @@ def bot(op):
                             del Setmain["ADITMADZSfoto"][Cmid]
                             kc.updateProfilePicture(path)
                             kc.sendMessage(msg.to,"Foto berhasil dirubah")
+                        elif Dmid in Setmain["ADITMADZSfoto"]:
+                            path = ke.downloadObjectMsg(msg_id)
+                            del Setmain["ADITMADZSfoto"][Dmid]
+                            ke.updateProfilePicture(path)
+                            ke.sendMessage(msg.to,"Foto berhasil dirubah")
 
                if msg.contentType == 1:
                  if msg._from in admin:
@@ -1580,6 +1595,7 @@ def bot(op):
                      path1 = ki.downloadObjectMsg(msg_id)
                      path2 = kk.downloadObjectMsg(msg_id)
                      path3 = kc.downloadObjectMsg(msg_id)
+                     path4 = ke.downloadObjectMsg(msg_id)
                      settings["changePicture"] = False
                      ki.updateProfilePicture(path1)
                      ki.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
@@ -1587,6 +1603,8 @@ def bot(op):
                      kk.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
                      kc.updateProfilePicture(path3)
                      kc.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
+                     ke.updateProfilePicture(path3)
+                     ke.sendMessage(msg.to, "Berhasil mengubah foto profile bot")
 
                if msg.contentType == 0:
                     if Setmain["autoRead"] == True:
