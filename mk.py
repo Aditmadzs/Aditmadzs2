@@ -420,14 +420,14 @@ def helpcreator():
 ╠❂➣ Set respon:「Text」
 ╠❂➣ Set welcome:「Text」
 ╠❂➣ Set leave:「Text」
-╠❂➣ maxname:「Name」
-╠❂➣ maxname:「Name」
-╠❂➣ max2name:「Name」
-╠❂➣ max3name:「Name」
-╠❂➣ max1up「Foto」
-╠❂➣ max2up「Foto」
-╠❂➣ max3up「Foto」
-╠❂➣ max4up「Foto」
+╠❂➣ 1name:「Name」
+╠❂➣ 2name:「Name」
+╠❂➣ 3name:「Name」
+╠❂➣ 4name:「Name」
+╠❂➣ 1up「Foto」
+╠❂➣ 2up「Foto」
+╠❂➣ 3up「Foto」
+╠❂➣ 4up「Foto」
 ╠❂➣ Gift:「Mid」「Jumlah」
 ╠❂➣ Spam:「Mid」「Jumlah」
 ╠❂➣ Spamtag:「jumlahnya」
@@ -553,7 +553,7 @@ def helpbot():
 ╠❂➣ Stealbio「@」
 ╠❂➣ Stealpicture「@」
 ╠❂➣ Bot1-4tag
-╠❂➣ แทค
+╠❂➣ Tagall
 ╚════════════════
 By:【さัএπัஞ✵ບิथℓℓҨतΩ】
 """
@@ -1609,7 +1609,11 @@ def bot(op):
 
                if msg.contentType == 0:
                     if Setmain["autoRead"] == True:
-                        aditmadzs.sendChatChecked(msg.to, msg_id)
+                        #aditmadzs.sendChatChecked(msg.to, msg_id)
+                        ki.sendChatChecked(msg.to, msg_id)
+                        kk.sendChatChecked(msg.to, msg_id)
+                        kc.sendChatChecked(msg.to, msg_id)
+                        ke.sendChatChecked(msg.to, msg_id)
                     if text is None:
                         return
                     else:
@@ -1711,7 +1715,7 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "╭══════════ STATUS ══════════\n"
+                                md = "╭═════ STATUS ═════\n"
                                 if wait["unsend"] == True: md+="║»» ✔️ Unsend「ON」\n"
                                 else: md+="║»» ❌ Unsend「OFF」\n"                                
                                 if wait["Mentionkick"] == True: md+="║»» ✔️ Notag「ON」\n"
@@ -1738,7 +1742,7 @@ def bot(op):
                                 else: md+="║»» ❌ Protectcancel「OFF」\n"
                                 if msg.to in protectinvite: md+="║»» ✔️ Protectinvite「ON」\n"
                                 else: md+="║»» ❌ Protectinvite「OFF」\n"                                
-                                aditmadzs.sendMessage(msg.to, md+"║»»══════════\n║»» Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n║»» Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n  ╰══════════")
+                                aditmadzs.sendMessage(msg.to, md+"║»»════════════\n║»» Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n║»» Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n╰════════════")
                                 aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "ผส" or text.lower() == 'creator':
@@ -1806,6 +1810,9 @@ def bot(op):
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Dmid}
                                aditmadzs.sendMessage1(msg)
+                               msg.contentType = 13
+                               msg.contentMetadata = {'mid': Zmid}
+                               aditmadzs.sendMessage1(msg)
 
                         elif text.lower() == "remove chat":
                           if wait["selfbot"] == True:
@@ -1818,6 +1825,21 @@ def bot(op):
                                    aditmadzs.sendMessage(msg.to,"Chat dibersihkan...")
                                except:
                                    pass
+
+                        elif cmd.startswith("leave: "):
+                          if msg._from in admin:
+                            separate = msg.text.split(" ")
+                            number = msg.text.replace(separate[0] + " ","")
+                            groups = cl.getGroupIdsJoined()
+                            group = groups[int(number)-1]
+                            for i in group:
+                                ginfo = cl.getGroup(i)
+                                if ginfo == group:
+                                    ki.leaveGroup(i)
+                                    kk.leaveGroup(i)
+                                    kc.leaveGroup(i)
+                                    ke.leaveGroup(i)
+                                    aditmadzs.sendMessage(msg.to,"Berhasil keluar di grup " +str(ginfo.name))
 
                         elif cmd.startswith("stealname "):
                           if msg._from in admin:
@@ -2080,28 +2102,28 @@ def bot(op):
                                    aditmadzs.sendMessage(msg.to, "Nama : "+str(x.name)+ "\nUrl grup : http://line.me/R/ti/g/"+gurl)
 
 #===========BOT UPDATE============#
-                        elif cmd == "updatefoto":
+                        elif cmd == "upfoto":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 Setmain["ADITMADZSfoto"][mid] = True
                                 aditmadzs.sendMessage(msg.to,"Kirim fotonya.....")
                                 
-                        elif cmd == "bot1up":
+                        elif cmd == "1up":
                             if msg._from in admin:
                                 Setmain["ADITMADZSfoto"][Amid] = True
                                 ki.sendMessage(msg.to,"Kirim fotonya.....")
                                 
-                        elif cmd == "bot2up":
+                        elif cmd == "2up":
                             if msg._from in admin:
                                 Setmain["ADITMADZSfoto"][Bmid] = True
                                 kk.sendMessage(msg.to,"Kirim fotonya.....")
                                 
-                        elif cmd == "bot3up":
+                        elif cmd == "3up":
                             if msg._from in admin:
                                 Setmain["ADITMADZSfoto"][Cmid] = True
                                 kc.sendMessage(msg.to,"Kirim fotonya.....")
 
-                        elif cmd == "bot4up":
+                        elif cmd == "4up":
                             if msg._from in admin:
                                 Setmain["ADITMADZSfoto"][Dmid] = True
                                 ke.sendMessage(msg.to,"Kirim fotonya.....")
@@ -2116,7 +2138,7 @@ def bot(op):
                                 aditmadzs.updateProfile(profile)
                                 aditmadzs.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
-                        elif cmd.startswith("bot1name: "):
+                        elif cmd.startswith("1name: "):
                           if msg._from in admin:
                             separate = msg.text.split(" ")
                             string = msg.text.replace(separate[0] + " ","")
@@ -2126,7 +2148,7 @@ def bot(op):
                                 ki.updateProfile(profile)
                                 ki.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
-                        elif cmd.startswith("bot2name: "):
+                        elif cmd.startswith("2name: "):
                           if msg._from in admin:
                             separate = msg.text.split(" ")
                             string = msg.text.replace(separate[0] + " ","")
@@ -2136,7 +2158,7 @@ def bot(op):
                                 kk.updateProfile(profile)
                                 kk.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
-                        elif cmd.startswith("bot3name: "):
+                        elif cmd.startswith("3name: "):
                           if msg._from in admin:
                             separate = msg.text.split(" ")
                             string = msg.text.replace(separate[0] + " ","")
@@ -2146,7 +2168,7 @@ def bot(op):
                                 kc.updateProfile(profile)
                                 kc.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
-                        elif cmd.startswith("bot4name: "):
+                        elif cmd.startswith("4name: "):
                           if msg._from in admin:
                             separate = msg.text.split(" ")
                             string = msg.text.replace(separate[0] + " ","")
@@ -2394,7 +2416,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = aditmadzs.getGroup(msg.to)
-                                ki.sendMessage(msg.to, "dadah group "+str(G.name))
+                                ki.sendMessage(msg.to, "Bye group "+str(G.name))
                                 ki.leaveGroup(msg.to)
                                 kk.leaveGroup(msg.to)
                                 kc.leaveGroup(msg.to)
