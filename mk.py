@@ -932,12 +932,7 @@ def bot(op):
                                                     aditmadzs.acceptGroupInvitation(op.param1)
                                                     kc.kickoutFromGroup(op.param1,[op.param2])
                                                 except:
-                                                    try:
-                                                        ke.inviteIntoGroup(op.param1,[op.param3])
-                                                        aditmadzs.acceptGroupInvitation(op.param1)
-                                                        ke.kickoutFromGroup(op.param1,[op.param2])
-                                                    except:
-                                                        pass
+                                                    pass
                 return
 
             if Amid in op.param3:
