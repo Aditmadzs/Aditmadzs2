@@ -39,13 +39,13 @@ ke = LineClient()
 #ke = LineClient(authToken='TOKEN LU')
 ke.log("Auth Token : " + str(ke.authToken))
 channel3 = LineChannel(ke)
-ke.log("Channel Access Token : " + str(channel4.channelAccessToken))
+ke.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
 sw = LineClient()
 #sw = LineClient(authToken='TOKEN LU')
 sw.log("Auth Token : " + str(sw.authToken))
 channel3 = LineChannel(ke)
-sw.log("Channel Access Token : " + str(channel5.channelAccessToken))
+sw.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
 poll = LinePoll(aditmadzs)
 call = aditmadzs
