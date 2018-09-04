@@ -1,12 +1,7 @@
-# ![logo](MAX-sm.png) LINE Python
-
-*LINE Messaging's private API*
-
-----
-# [ADD ME!](http://line.me/ti/p/~aditmadzsbot1)
+# [ADD ME!](http://line.me/ti/p/~max_pv)
 # Ambil Token Bisa Di
-# [ADITMADZS PUBLIC BOT](http://line.me/ti/p/~aditmadzsbot1)
-# [ADITMADZS BOT](http://line.me/ti/p/~aditmadzsbot)
+# [ADITMADZS PUBLIC BOT](http://line.me/ti/p/~max_pv)
+# [ADITMADZS BOT](http://line.me/ti/p/~max_pv)
 
 # Termux
 
