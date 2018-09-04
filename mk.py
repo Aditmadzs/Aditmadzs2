@@ -897,11 +897,11 @@ def bot(op):
                                 kc.kickoutFromGroup(op.param1,[op.param2])
                             except:
                                 try:
-                                        ke.inviteIntoGroup(op.param1,[op.param3])
-                                        aditmadzs.acceptGroupInvitation(op.param1)
-                                        ke.kickoutFromGroup(op.param1,[op.param2])
-                                    except:
-                                        try:
+                                    ke.inviteIntoGroup(op.param1,[op.param3])
+                                    aditmadzs.acceptGroupInvitation(op.param1)
+                                    ke.kickoutFromGroup(op.param1,[op.param2])
+                                except:
+                                    try:
                                         G = ki.getGroup(op.param1)
                                         G.preventedJoinByTicket = False
                                         ki.updateGroup(G)
@@ -932,7 +932,12 @@ def bot(op):
                                                     aditmadzs.acceptGroupInvitation(op.param1)
                                                     kc.kickoutFromGroup(op.param1,[op.param2])
                                                 except:
-                                                    pass
+                                                    try:
+                                                        kc.inviteIntoGroup(op.param1,[op.param3])
+                                                        aditmadzs.acceptGroupInvitation(op.param1)
+                                                        kc.kickoutFromGroup(op.param1,[op.param2])
+                                                    except:
+                                                        pass
                 return
 
             if Amid in op.param3:
