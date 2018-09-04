@@ -41,6 +41,12 @@ ke.log("Auth Token : " + str(ke.authToken))
 channel3 = LineChannel(ke)
 ke.log("Channel Access Token : " + str(channel4.channelAccessToken))
 
+sw = LineClient()
+#sw = LineClient(authToken='TOKEN LU')
+sw.log("Auth Token : " + str(sw.authToken))
+channel3 = LineChannel(ke)
+sw.log("Channel Access Token : " + str(channel5.channelAccessToken))
+
 poll = LinePoll(aditmadzs)
 call = aditmadzs
 creator = ["u4862fe4b182b2fd194a3108e2f3662e8"]
@@ -2379,7 +2385,7 @@ def bot(op):
                                 get_contact_time = time.time() - get_contact_time_start
                                 aditmadzs.sendMessage(msg.to, " »» Aditmadzs Speed respon\n\n - Get Profile\n   %.10f\n - Get Contact\n   %.10f\n - Get Group\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
 
-                        elif cmd == "/speed" or cmd == "sp":
+                        elif cmd == "speed" or cmd == "sp":
                           if wait["selfbot"] == True:
                                start = time.time()
                                print("Speed")
@@ -2744,7 +2750,32 @@ def bot(op):
                                     aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
 
 #===========KICKOUT============#
-                        elif ("Kick " in msg.text):
+                        elif ("Tampal " in msg.text):
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                               key = eval(msg.contentMetadata["MENTION"])
+                               key["MENTIONEES"][0]["M"]
+                               targets = []
+                               for x in key["MENTIONEES"]:
+                                    targets.append(x["M"])
+                               for target in targets:
+                                   if target not in Bots:
+                                       try:
+                                           G = cl.getGroup(msg.to)
+                                           G.preventedJoinByTicket = False
+                                           cl.updateGroup(G)
+                                           invsend = 0
+                                           Ticket = cl.reissueGroupTicket(msg.to)
+                                           sw.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                           sw.kickoutFromGroup(msg.to, [target])
+                                           sw.leaveGroup(msg.to)
+                                           X = cl.getGroup(msg.to)
+                                           X.preventedJoinByTicket = True
+                                           cl.updateGroup(X)
+                                       except:
+                                           pass
+
+                        elif ("Ciak " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
@@ -3161,8 +3192,11 @@ def bot(op):
                                      kk.acceptGroupInvitationByTicket(group2.id,ticket_id)
                                      kk.sendMessage(msg.to, "ADITMADZS OTW JOIN GROUP : %s" % str(group.name))
                                      group3 = kc.findGroupByTicket(ticket_id)
-                                     kc.acceptGroupInvitationByTicket(group3.id,ticket_id)
+                                     kc.acceptGroupInvitationByTicket(group2.id,ticket_id)
                                      kc.sendMessage(msg.to, "ADITMADZS OTW JOIN GROUP : %s" % str(group.name))
+                                     group4 = ke.findGroupByTicket(ticket_id)
+                                     ke.acceptGroupInvitationByTicket(group2.id,ticket_id)
+                                     ke.sendMessage(msg.to, "ADITMADZS OTW JOIN GROUP : %s" % str(group.name))
 
     except Exception as error:
         print (error)
