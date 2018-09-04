@@ -58,9 +58,10 @@ Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 Dmid = ke.getProfile().mid
+Zmid = sw.getProfile().mid
 KAC = [aditmadzs,ki,kk,kc,ke]
 ABC = [ki,kk,kc,ke]
-Bots = [mid,Amid,Bmid,Cmid,Dmid]
+Bots = [mid,Amid,Bmid,Cmid,Dmid,Zmid]
 Madzs = admin + staff
 
 protectqr = []
@@ -396,6 +397,8 @@ def help():
 ╠❂➣ Status
 ╚════════════════
 By:【さัএπัஞ✵ບิथℓℓҨतΩ】
+ADD ME:max_pv
+https://line.me/ti/p/tN_nyNGY8K
 """
     return helpMessage
     
@@ -1597,6 +1600,7 @@ def bot(op):
                             if msg._from in admin:
                                helpMessage = help()
                                aditmadzs.sendMessage(msg.to, str(helpMessage))
+                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
                                                                                        
                         if cmd == "self on":
                             if msg._from in admin:
@@ -1617,7 +1621,7 @@ def bot(op):
                                url = 'https://line.me/ti/p/~max_pv'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage1), str(name), str(url), str(iconlink))
-
+                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
                         elif cmd == "help3":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -1627,7 +1631,8 @@ def bot(op):
                                url = 'https://line.me/ti/p/~max_pv'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage4), str(name), str(url), str(iconlink))
-                               
+                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+
                         elif cmd == "help4":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -1637,6 +1642,7 @@ def bot(op):
                                url = 'https://line.me/ti/p/~max_pv'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage5), str(name), str(url), str(iconlink))                      
+                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help5":
                           if wait["selfbot"] == True:
@@ -1647,6 +1653,7 @@ def bot(op):
                                url = 'https://line.me/ti/p/~max_pv'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage6), str(name), str(url), str(iconlink))
+                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help6":
                           if wait["selfbot"] == True:
@@ -1657,6 +1664,7 @@ def bot(op):
                                url = 'https://line.me/ti/p/~max_pv'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage8), str(name), str(url), str(iconlink))
+                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help7":
                           if wait["selfbot"] == True:
@@ -1667,6 +1675,7 @@ def bot(op):
                                url = 'https://line.me/ti/p/~max_pv'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage3), str(name), str(url), str(iconlink))
+                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         if cmd == "unsend on":
                             if msg._from in admin:
@@ -1711,6 +1720,7 @@ def bot(op):
                                 if msg.to in protectinvite: md+="║»» ✔️ Protectinvite「ON」\n"
                                 else: md+="║»» ❌ Protectinvite「OFF」\n"                                
                                 aditmadzs.sendMessage(msg.to, md+"║»»══════════\n║»» Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n║»» Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n  ╰══════════")
+                                aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "ผส" or text.lower() == 'creator':
                             if msg._from in admin:
