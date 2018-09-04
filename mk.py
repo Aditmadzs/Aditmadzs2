@@ -79,6 +79,7 @@ myProfile["pictureStatus"] = MadzsProfile.pictureStatus
 responsename1 = ki.getProfile().displayName
 responsename2 = kk.getProfile().displayName
 responsename3 = kc.getProfile().displayName
+responsename4 = ke.getProfile().displayName
 
 cctv = {
     "cyduk":{},
@@ -372,26 +373,24 @@ def command(text):
 def help():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage = "╭═══════════════════════════" + "\n" + \
-                  "║»»════【さัএπัஞ✵ບิथℓℓҨतΩ】════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help Message ══════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»════════ List Menu ════════" + "\n" + \
-                  "║»» " + key + "Cctv「on/off」\n" + \
-				  "║»» " + key + "Creator\n" + \
-				  "║»» " + key + "Cyduk\n" + \
-				  "║»» " + key + "Help admin\n" + \
-				  "║»» " + key + "Help blacklist\n" + \
-				  "║»» " + key + "Help bot\n" + \
-                  "║»» " + key + "Help creator\n" + \
-				  "║»» " + key + "Help setting\n" + \
-                  "║»» " + key + "Listbot\n" + \
-                  "║»» " + key + "Listadmin\n" + \
-				  "║»» " + key + "Status\n" + \
-				  "║»════════════════════════════" + "\n" + \
-                  "║»══ http://line.me/ti/p/~max_pv" + "\n" + \
-                  "╰═════BY:【さัএπัஞ✵ບิथℓℓҨतΩ】"
+    helpMessage = """[ MAX SELF BOT ]
+╔════════════════
+╠ 【さัএπัஞ✵ບิथℓℓҨतΩ】
+╠════════════════
+╠❂➣ Cctv「on/off」
+╠❂➣ Creator
+╠❂➣ Cyduk
+╠❂➣ Help admin
+╠❂➣ Help blacklist
+╠❂➣ Help bot
+╠❂➣ Help creator
+╠❂➣ Help setting
+╠❂➣ Listbot
+╠❂➣ Listadmin
+╠❂➣ Status
+╚════════════════
+By:【さัএπัஞ✵ບิथℓℓҨतΩ】
+"""
     return helpMessage
     
     
@@ -399,93 +398,84 @@ def help():
 def helpcreator():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage1 = "╭═════════════════════════" + "\n" + \
-                  "║»»════【さัএπัஞ✵ບิथℓℓҨतΩ】════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»══════ Help BOT ═══════" + "\n" + \
-                  "║»════════════════════════" + "\n" + \
-                  "║»»══════ List Menu ══════" + "\n" + \
-                  "║»» " + key + "Cek spam\n" + \
-                  "║»» " + key + "Cek pesan\n" + \
-                  "║»» " + key + "Cek respon\n" + \
-                  "║»» " + key + "Cek welcome\n" + \
-                  "║»» " + key + "Cek leave\n" + \
-                  "║»» " + key + "Set spam:「Text」\n" + \
-                  "║»» " + key + "Set pesan:「Text」\n" + \
-                  "║»» " + key + "Set respon:「Text」\n" + \
-                  "║»» " + key + "Set welcome:「Text」\n" + \
-                  "║»» " + key + "Set leave:「Text」\n" + \
-                  "║»» " + key + "Ditname:「Name」\n" + \
-                  "║»» " + key + "Dit1name:「Name」\n" + \
-                  "║»» " + key + "Dit2name:「Name」\n" + \
-                  "║»» " + key + "Ditname:「Name」\n" + \
-				  "║»» " + key + "Dit3name:「Name」\n" + \
-                  "║»» " + key + "Dit1up「Foto」\n" + \
-                  "║»» " + key + "Dit2up「Foto」\n" + \
-                  "║»» " + key + "Dit3up「Foto」\n" + \
-				  "║»» " + key + "Dit4up「Foto」\n" + \
-                  "║»» " + key + "Gift:「Mid」「Jumlah」\n" + \
-                  "║»» " + key + "Spam:「Mid」「Jumlah」\n" + \
-				  "║»» " + key + "Spamtag:「jumlahnya」\n" + \
-                  "║»» " + key + "Spamtag「@」\n" + \
-                  "║»» " + key + "Spamcall:「jumlahnya」\n" + \
-                  "║»» " + key + "Spamcall\n" + \
-                  "║»» " + key + "Broadcast:「Text」\n" + \
-                  "║»» " + key + "Setkey「New Key」\n" + \
-                  "║»» " + key + "Mykey\n" + \
-                  "║»» " + key + "Resetkey\n" + \
-				  "║»» " + key + "Self「on/off」\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»══ http://line.me/ti/p/~max_pv" + "\n" + \
-                  "╰═════BY:【さัএπัஞ✵ບิथℓℓҨतΩ】"
+    helpMessage1 = """╔════════════════
+╠ 【さัএπัஞ✵ບิथℓℓҨतΩ】
+╠════════════════
+╠❂➣ Cek spam
+╠❂➣ Cek pesan
+╠❂➣ Cek respon
+╠❂➣ Cek welcome
+╠❂➣ Cek leave
+╠❂➣ Set spam:「Text」
+╠❂➣ Set pesan:「Text」
+╠❂➣ Set respon:「Text」
+╠❂➣ Set welcome:「Text」
+╠❂➣ Set leave:「Text」
+╠❂➣ Ditname:「Name」
+╠❂➣ Dit1name:「Name」
+╠❂➣ Dit2name:「Name」
+╠❂➣ Dit3name:「Name」
+╠❂➣ Dit1up「Foto」
+╠❂➣ Dit2up「Foto」
+╠❂➣ Dit3up「Foto」
+╠❂➣ Dit4up「Foto」
+╠❂➣ Gift:「Mid」「Jumlah」
+╠❂➣ Spam:「Mid」「Jumlah」
+╠❂➣ Spamtag:「jumlahnya」
+╠❂➣ Spamtag「@」
+╠❂➣ Spamcall:「jumlahnya」
+╠❂➣ Spamcall
+╠❂➣ Broadcast:「Text」
+╠❂➣ Setkey「New Key」
+╠❂➣ Mykey
+╠❂➣ Resetkey
+╠❂➣ Self「on/off」
+╚════════════════
+By:【さัএπัஞ✵ບิथℓℓҨतΩ】
+"""
     return helpMessage1
 
 def helpblacklist():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage3 = "╭══════════════════════════" + "\n" + \
-                  "║»»════【さัএπัஞ✵ບิथℓℓҨतΩ】 ════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help Blacklist ══════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»═══════ List Menu ═══════" + "\n" + \
-                  "║»» " + key + "Banlist\n" + \
-				  "║»» " + key + "Ban:on\n" + \
-                  "║»» " + key + "Blc\n" + \
-				  "║»» " + key + "Clearban\n" + \
-				  "║»» " + key + "Refresh\n" + \
-				  "║»» " + key + "Unban「@」\n" + \
-				  "║»» " + key + "Unban:on\n" + \
-				  "║»══════════════════════════" + "\n" + \
-                  "║»══ http://line.me/ti/p/~max_pv" + "\n" + \
-                  "╰═════BY:【さัএπัஞ✵ບิथℓℓҨतΩ】"
+    helpMessage3 = """╔════════════════
+╠ 【さัএπัஞ✵ບิथℓℓҨतΩ】
+╠════════════════
+╠❂➣ Banlist
+╠❂➣ Ban:on
+╠❂➣ Unban:on
+╠❂➣ Blc
+╠❂➣ Clearban
+╠❂➣ Refresh
+╠❂➣ Unban「@」
+╠❂➣ Ban「@」
+╚════════════════
+By:【さัএπัஞ✵ບิथℓℓҨतΩ】
+"""
     return helpMessage3
 
 def helpadmin():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage4 = "╭══════════════════════════" + "\n" + \
-                  "║»»════【さัএπัஞ✵ບิथℓℓҨतΩ】════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help Admin ══════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»═══════ List Menu ═══════" + "\n" + \
-                  "║»» " + key + "Admin:on\n" + \
-                  "║»» " + key + "Admin:repeat\n" + \
-                  "║»» " + key + "Adminadd「@」\n" + \
-                  "║»» " + key + "Admindell「@」\n" + \
-				  "║»» " + key + "Bot:on\n" + \
-                  "║»» " + key + "Bot:repeat\n" + \
-				  "║»» " + key + "Botadd「@」\n" + \
-                  "║»» " + key + "Botdell「@」\n" + \
-				  "║»» " + key + "Refresh\n" + \
-				  "║»» " + key + "Staff:on\n" + \
-                  "║»» " + key + "Staff:repeat\n" + \
-                  "║»» " + key + "Staffadd「@」\n" + \
-                  "║»» " + key + "Staffdell「@」\n" + \
-                  "║»═══════════════════════════" + "\n" + \
-                  "║»══ http://line.me/ti/p/~max_pv" + "\n" + \
-                  "╰═════BY:【さัএπัஞ✵ບิथℓℓҨतΩ】"
+    helpMessage4 = """╔════════════════
+╠ 【さัএπัஞ✵ບิथℓℓҨतΩ】
+╠═════════════
+╠❂➣ Admin:on
+╠❂➣ Admin:repeat
+╠❂➣ Adminadd「@」
+╠❂➣ Admindell「@」
+╠❂➣ Bot:on
+╠❂➣ Bot:repeat
+╠❂➣ Botadd「@」
+╠❂➣ Botdell「@」
+╠❂➣ Refresh
+╠❂➣ Staff:on
+╠❂➣ Staff:repeat
+╠❂➣ Staffadd「@」
+╠❂➣ Staffdell「@」
+╚════════════════
+By:【さัএπัஞ✵ບิथℓℓҨतΩ】
+"""
     return helpMessage4
     	
 def helpsetting():
