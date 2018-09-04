@@ -88,6 +88,88 @@ responsename2 = kk.getProfile().displayName
 responsename3 = kc.getProfile().displayName
 responsename4 = ke.getProfile().displayName
 
+settings = {
+    "Picture":False,
+    "group":{},
+    "groupPicture":False,
+    "changePicture":False,
+    "autoJoinTicket":True,
+    "userAgent": [
+        "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (X11; U; Linux amd64; rv:5.0) Gecko/20100101 Firefox/5.0 (Debian)",
+        "Mozilla/5.0 (X11; U; Linux amd64; en-US; rv:5.0) Gecko/20110619 Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux) Gecko Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux x86_64; rv:5.0) Gecko/20100101 Firefox/5.0 FirePHP/0.5",
+        "Mozilla/5.0 (X11; Linux x86_64; rv:5.0) Gecko/20100101 Firefox/5.0 Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux x86_64) Gecko Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux ppc; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux AMD64) Gecko Firefox/5.0",
+        "Mozilla/5.0 (X11; FreeBSD amd64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:5.0) Gecko/20110619 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1.1; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.2; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.1; U; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.1; rv:2.0.1) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.0; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.0; rv:5.0) Gecko/20100101 Firefox/5.0"
+    ]
+}
+
+wait = {
+    "limit": 1,
+    "owner":{},
+    "admin":{},
+    "addadmin":False,
+    "delladmin":False,
+    "staff":{},
+    "addstaff":False,
+    "dellstaff":False,
+    "bots":{},
+    "addbots":False,
+    "dellbots":False,
+    "blacklist":{},
+    "wblacklist":False,
+    "dblacklist":False,
+    "Talkblacklist":{},
+    "Talkwblacklist":False,
+    "Talkdblacklist":False,
+    "blacklist": {
+        "u2b2e60930f1365f0806c7d0a6898cc93": true,
+        "u705189478e7afd24a601fd25827e6b15": true,
+        "ub3c2810ee372305631758bd937deb517": true
+    },
+    "talkban":True,
+    "contact":False,
+    'autoJoin':True,
+    'autoAdd':True,
+    'autoLeave':False,
+    'autoLeave1':True,
+    "autoRead":True,
+    "Mentiongift":True
+    "detectMention":True,
+    "Mentionkick":False,
+    "welcomeOn":False,
+    "sticker":False,
+    "selfbot":True,
+    "unsend":True
+    "mention":"NGINTIPPP!!!",
+    "Respontag":"SEKARANG TAG BESOK JATUH CINTA 😨",
+    "welcome":"Selamat datang & betah",
+    "comment":"Like like & like by 【さัএπัஞ✵ບิथℓℓҨतΩ】",
+    "message":"【さัএπัஞ✵ບิथℓℓҨतΩ】 :\nList opsi\n🤖 Pasangan Hidup :\n🔰 Only Status ⏩ 180K/Bulan\n\n🤖 Systim Contract :\n🔰 Only Curhat ⏩ 100K/Bulan\n🔰 Zona Friend + TTM\n🔰 Zona Nyaman + Full Care + On 5day + 2 day free ⏩ 300K/Bulan\n\n✍️ Bisa Requests Mau Berapa Lama Durasi Buat Debay.\nChat Ke : http://line.me/ti/p/~max_pv\n\n📃\n* Always on 24 Jam\n* Keuntungan Banyak\n* Durasi min 0.25month\n* max no limit",
+    "leave": "Good Bye, See You Next Time ??",
+    }
+
+read = {
+    "readPoint":{},
+    "readMember":{},
+    "readTime":{},
+    "ROM":{},
+}
+
 cctv = {
     "cyduk":{},
     "point":{},
@@ -1770,6 +1852,9 @@ def bot(op):
                             if msg._from in admin:
                                aditmadzs.sendMessage(msg.to, msg._from)
 
+                        elif text.lower() == "mid":
+                               cl.sendMessage(msg.to, msg._from)
+
                         elif ("Mid " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -1975,10 +2060,10 @@ def bot(op):
                                     gTicket = "Tidak ada"
                                 else:
                                     gQr = "Terbuka"
-                                    gTicket = "https://line.me/R/ti/g/{}".format(str(aditmadzs.reissueGroupTicket(G.id)))
+                                    gTicket = "https://line.me/R/ti/g/{}".format(str(cl.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                aditmadzs.sendMessage(msg.to, "║»» BOT Grup Info\n\n ║»» Nama Group : {}".format(G.name)+ "\n»» ID Group : {}".format(G.id)+ "\n»» Pembuat : {}".format(G.creator.displayName)+ "\n»» Waktu Dibuat : {}".format(str(timeCreated))+ "\n»» Jumlah Member : {}".format(str(len(G.members)))+ "\n»» Jumlah Pending : {}".format(gPending)+ "\n»» Group Qr : {}".format(gQr)+ "\n»» Group Ticket : {}".format(gTicket))
+                                aditmadzs.sendMessage(msg.to, "┃😈┃ ┃MAX┃ Family Grup Info\n\n┃😈┃ Nama Group : {}".format(G.name)+ "\n┃😈┃ ID Group : {}".format(G.id)+ "\n┃😈┃ Pembuat : {}".format(G.creator.displayName)+ "\n┃😈┃ Waktu Dibuat : {}".format(str(timeCreated))+ "\n┃😈┃ Jumlah Member : {}".format(str(len(G.members)))+ "\n┃😈┃ Jumlah Pending : {}".format(gPending)+ "\n┃😈┃ Group Qr : {}".format(gQr)+ "\n┃😈┃ Group Ticket : {}".format(gTicket))
                                 aditmadzs.sendMessage(msg.to, None, contentMetadata={'mid': G.creator.mid}, contentType=13)
                                 aditmadzs.sendImageWithURL(msg.to, 'http://dl.profile.line-cdn.net/'+G.pictureStatus)
                             except Exception as e:
@@ -2394,7 +2479,20 @@ def bot(op):
                                 kk.sendMessage(msg.to,responsename2)
                                 kc.sendMessage(msg.to,responsename3)
                                 ke.sendMessage(msg.to,responsename4)
-    
+
+                        elif cmd == "invitebot":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                try:
+                                    anggota = [Amid,Bmid,Cmid,Dmid]
+                                    aditmadzs.inviteIntoGroup(msg.to, anggota)
+                                    ki.acceptGroupInvitation(msg.to)
+                                    kk.acceptGroupInvitation(msg.to)
+                                    kc.acceptGroupInvitation(msg.to)
+                                    ke.acceptGroupInvitation(msg.to)
+                                except:
+                                    pass
+
                         elif cmd == "join":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -2422,6 +2520,103 @@ def bot(op):
                                 kc.leaveGroup(msg.to)
                                 ke.leaveGroup(msg.to)
 
+                        elif cmd == "byeme":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                aditmadzs.sendText(msg.to, "Bye bye fams "+str(G.name))
+                                aditmadzs.leaveGroup(msg.to)
+
+                        elif cmd == "1in":
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                ginfo = aditmadzs.getGroup(msg.to)
+                                G.preventedJoinByTicket = False
+                                aditmadzs.updateGroup(G)
+                                invsend = 0
+                                Ticket = aditmadzs.reissueGroupTicket(msg.to)
+                                ki.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                G = ki.getGroup(msg.to)
+                                G.preventedJoinByTicket = True
+                                ki.updateGroup(G)
+
+                        elif cmd == "2in":
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                ginfo = aditmadzs.getGroup(msg.to)
+                                G.preventedJoinByTicket = False
+                                aditmadzs.updateGroup(G)
+                                invsend = 0
+                                Ticket = aditmadzs.reissueGroupTicket(msg.to)
+                                kk.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                G = kk.getGroup(msg.to)
+                                G.preventedJoinByTicket = True
+                                kk.updateGroup(G)
+
+                        elif cmd == "3in":
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                ginfo = aditmadzs.getGroup(msg.to)
+                                G.preventedJoinByTicket = False
+                                aditmadzs.updateGroup(G)
+                                invsend = 0
+                                Ticket = aditmadzs.reissueGroupTicket(msg.to)
+                                kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                G = kc.getGroup(msg.to)
+                                G.preventedJoinByTicket = True
+                                kc.updateGroup(G)
+
+                        elif cmd == "4in":
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                ginfo = aditmadzs.getGroup(msg.to)
+                                G.preventedJoinByTicket = False
+                                aditmadzs.updateGroup(G)
+                                invsend = 0
+                                Ticket = aditmadzs.reissueGroupTicket(msg.to)
+                                ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                G = ke.getGroup(msg.to)
+                                G.preventedJoinByTicket = True
+                                ke.updateGroup(G)
+
+                        elif cmd == "5in":
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                ginfo = aditmadzs.getGroup(msg.to)
+                                G.preventedJoinByTicket = False
+                                aditmadzs.updateGroup(G)
+                                invsend = 0
+                                Ticket = aditmadzs.reissueGroupTicket(msg.to)
+                                sw.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                G = sw.getGroup(msg.to)
+                                G.preventedJoinByTicket = True
+                                sw.updateGroup(G)
+
+                        elif cmd == "1bye":
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                ki.leaveGroup(msg.to)
+
+                        elif cmd == "2bye":
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                kk.leaveGroup(msg.to)
+
+                        elif cmd == "3bye":
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                kc.leaveGroup(msg.to)
+
+                        elif cmd == "4bye":
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                ke.leaveGroup(msg.to)
+
+                        elif cmd == "5bye":
+                            if msg._from in admin:
+                                G = aditmadzs.getGroup(msg.to)
+                                sw.leaveGroup(msg.to)
+
                         elif cmd == "sprespon":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -2438,17 +2633,11 @@ def bot(op):
 
                         elif cmd == "speed" or cmd == "sp":
                           if wait["selfbot"] == True:
+                            if msg._from in admin:
                                start = time.time()
-                               print("Speed")
+                               aditmadzs.sendMessage(msg.to, "Progres speed...")
                                elapsed_time = time.time() - start
-                               contact = aditmadzs.getProfile()
-                               mids = [contact.mid]
-                               name = "{}".format(str(contact.displayName))
-                               url = 'https://line.me/ti/p/~max_pv'
-                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(contact.pictureStatus))
-                               text = "Waiting...."
-                               sendMentionV10(msg.to, str(text), str(name), str(url), str(iconlink))
-                               aditmadzs.sendMessage(msg.to,format(str(elapsed_time)))
+                               aditmadzs.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
 
                         elif cmd == "speedbot" or cmd == "spb":
                           if wait["selfbot"] == True:
