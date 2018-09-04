@@ -375,7 +375,7 @@ def help():
     key = key.title()
     helpMessage = """[ MAX SELF BOT ]
 ╔════════════════
-╠ 【さัএπัஞ✵ບิथℓℓҨतΩ】
+╠❂➣    HELP
 ╠════════════════
 ╠❂➣ Cctv「on/off」
 ╠❂➣ Creator
@@ -399,7 +399,7 @@ def helpcreator():
     key = Setmain["keyCommand"]
     key = key.title()
     helpMessage1 = """╔════════════════
-╠ 【さัএπัஞ✵ບิथℓℓҨतΩ】
+╠❂➣ HELP CREATOR
 ╠════════════════
 ╠❂➣ Cek spam
 ╠❂➣ Cek pesan
@@ -438,8 +438,9 @@ By:【さัএπัஞ✵ບิथℓℓҨतΩ】
 def helpblacklist():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage3 = """╔════════════════
-╠ 【さัএπัஞ✵ບิथℓℓҨतΩ】
+    helpMessage3 = """
+╔════════════════
+╠❂➣ HELP BACKLIST
 ╠════════════════
 ╠❂➣ Banlist
 ╠❂➣ Ban:on
@@ -457,9 +458,10 @@ By:【さัএπัஞ✵ບิथℓℓҨतΩ】
 def helpadmin():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage4 = """╔════════════════
-╠ 【さัএπัஞ✵ບิथℓℓҨतΩ】
-╠═════════════
+    helpMessage4 = """
+╔════════════════
+╠❂➣  HELP ADMIN
+╠════════════════
 ╠❂➣ Admin:on
 ╠❂➣ Admin:repeat
 ╠❂➣ Adminadd「@」
@@ -481,81 +483,72 @@ By:【さัএπัஞ✵ບิथℓℓҨतΩ】
 def helpsetting():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage5 = "╭══════════════════════════" + "\n" + \
-                  "║»»════【さัএπัஞ✵ບิथℓℓҨतΩ】════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help Setting ══════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»═══════ List Menu ═══════" + "\n" + \
-                  "║»» " + key + "Autoadd「on/off」\n" + \
-				  "║»» " + key + "Autojoin「on/off」\n" + \
-				  "║»» " + key + "Autoleave「on/off」\n" + \
-				  "║»» " + key + "Contact「on/off」\n" + \
-				  "║»» " + key + "Jointicket「on/off」\n" + \
-				  "║»» " + key + "Respon「on/off」\n" + \
-				  "║»» " + key + "Unsend「on/off」\n" + \
-                  "║»» " + key + "Welcome「on/off」\n" + \
-                  "║»═══════════════════════════" + "\n" + \
-                  "║»══ http://line.me/ti/p/~max_pv" + "\n" + \
-                  "╰═════BY:【さัএπัஞ✵ບิथℓℓҨतΩ】"
+    helpMessage5 = """╔════════════════
+╠❂➣ HELP SETTING
+╠════════════════
+╠❂➣ Autoadd「on/off」
+╠❂➣ Autojoin「on/off」
+╠❂➣ Welcome「on/off」
+╠❂➣ Autoleave「on/off」
+╠❂➣ Contact「on/off」
+╠❂➣ Jointicket「on/off」
+╠❂➣ Respon「on/off」
+╠❂➣ Unsend「on/off」
+╚════════════════
+By:【さัএπัஞ✵ບิथℓℓҨतΩ】
+"""
     return helpMessage5
     
 def helpprotect():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage6 = "╭══════════════════════════" + "\n" + \
-                  "║»»════【さัএπัஞ✵ບิथℓℓҨतΩ】════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help Protect ══════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»═══════ List Menu ═══════" + "\n" + \
-				  "║»» " + key + "Join dit\n" + \
-				  "║»» " + key + "Ditpro 「on/off」\n" + \
-                  "║»» " + key + "Notag「on/off」\n" + \
-                  "║»» " + key + "Protecturl「on/off」\n" + \
-                  "║»» " + key + "Protectjoin「on/off」\n" + \
-                  "║»» " + key + "Protectkick「on/off」\n" + \
-                  "║»» " + key + "Protectcancel「on/off」\n" + \
-                  "║»» " + key + "Protectinvite「on/off」\n" + \
-				  "║»═══════════════════════════" + "\n" + \
-                  "║»══ http://line.me/ti/p/~max_pv" + "\n" + \
-                  "╰═════ BY:【さัএπัஞ✵ບิथℓℓҨतΩ】"
+    helpMessage6 = """╔════════════════
+╠❂➣  HELP PROTECT 
+╠════════════════
+╠❂➣ Join dit
+╠❂➣ Ditpro 「on/off」
+╠❂➣ Notag「on/off」
+╠❂➣ Protecturl「on/off」
+╠❂➣ Protectjoin「on/off」
+╠❂➣ Protectkick「on/off」
+╠❂➣ Protectcancel「on/off」
+╠❂➣ Protectinvite「on/off」
+╚════════════════
+By:【さัএπัஞ✵ບิथℓℓҨतΩ】
+"""
     return helpMessage6
 	
 def helpbot():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage8 = "╭══════════════════════════" + "\n" + \
-                  "║»»═════【さัএπัஞ✵ບิथℓℓҨतΩ】═════" + "\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»»═════ Help BOT ══════" + "\n" + \
-                  "║»═════════════════════════" + "\n" + \
-                  "║»»═══════ List Menu ═══════" + "\n" + \
-                  "║»» " + key + "About\n" + \
-				  "║»» " + key + "Close\n" + \
-				  "║»» " + key + "Ginfo\n" + \
-				  "║»» " + key + "Gruplist\n" + \
-				  "║»» " + key + "Info 「@」\n" + \
-				  "║»» " + key + "「@」Kick\n" + \
-				  "║»» " + key + "Me\n" + \
-                  "║»» " + key + "Mid「@」\n" + \
-				  "║»» " + key + "Mybot\n" + \
-                  "║»» " + key + "Mymid\n" + \
-				  "║»» " + key + "Open\n" + \
-				  "║»» " + key + "Respon\n" + \
-				  "║»» " + key + "Restart\n" + \
-				  "║»» " + key + "Runtime\n" + \
-				  "║»» " + key + "Speed/Sp\n" + \
-                  "║»» " + key + "Sprespon\n" + \
-				  "║»» " + key + "Stealname「@」\n" + \
-                  "║»» " + key + "Stealbio「@」\n" + \
-                  "║»» " + key + "Stealcover「@」\n" + \
-				  "║»» " + key + "Stealpicture「@」\n" + \
-                  "║»» " + key + "Stealvideoprofile「@」\n" + \
-                  "║»» " + key + "Tagall\n" + \
-                  "║»══════════════════════════" + "\n" + \
-                  "║»══ http://line.me/ti/p/~max_pv" + "\n" + \
-                  "╰═════ BY:【さัএπัஞ✵ບิथℓℓҨतΩ】"
+    helpMessage8 = """╔════════════════
+╠❂➣   HELP BOT
+╠════════════════
+╠❂➣ About
+╠❂➣ Close
+╠❂➣ Ginfo
+╠❂➣ Gruplist
+╠❂➣ Info 「@」
+╠❂➣ Kick「@」
+╠❂➣ Me
+╠❂➣ Mid「@」
+╠❂➣ Mymid
+╠❂➣ Mybot
+╠❂➣ Open
+╠❂➣ Respon
+╠❂➣ Runtime
+╠❂➣ Restart
+╠❂➣ Sp/Speed
+╠❂➣ Sprespon
+╠❂➣ Stealname「@」
+╠❂➣ Stealcover「@」
+╠❂➣ Steacbio「@」
+╠❂➣ Stealpicture「@」
+╠❂➣ Stealvideoprofile「@」
+╠❂➣ Tagall
+╚════════════════
+By:【さัএπัஞ✵ບิथℓℓҨतΩ】
+"""
     return helpMessage8
 
 def bot(op):
