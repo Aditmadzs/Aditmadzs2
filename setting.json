@@ -8,7 +8,7 @@
     "autoJoin": true,
     "autoReject": false,
     "autoLeave": true,
-    "autoRead": false,
+    "autoRead": true,
     "server": {},
     "changePicture": false,
     "changeGroupPicture": false,
