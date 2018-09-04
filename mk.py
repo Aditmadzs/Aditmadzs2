@@ -44,7 +44,7 @@ ke.log("Channel Access Token : " + str(channel3.channelAccessToken))
 sw = LineClient()
 #sw = LineClient(authToken='TOKEN LU')
 sw.log("Auth Token : " + str(sw.authToken))
-channel3 = LineChannel(ke)
+channel1 = LineChannel(ke)
 sw.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
 poll = LinePoll(aditmadzs)
@@ -420,14 +420,14 @@ def helpcreator():
 ╠❂➣ Set respon:「Text」
 ╠❂➣ Set welcome:「Text」
 ╠❂➣ Set leave:「Text」
-╠❂➣ Ditname:「Name」
-╠❂➣ Dit1name:「Name」
-╠❂➣ Dit2name:「Name」
-╠❂➣ Dit3name:「Name」
-╠❂➣ Dit1up「Foto」
-╠❂➣ Dit2up「Foto」
-╠❂➣ Dit3up「Foto」
-╠❂➣ Dit4up「Foto」
+╠❂➣ maxname:「Name」
+╠❂➣ maxname:「Name」
+╠❂➣ max2name:「Name」
+╠❂➣ max3name:「Name」
+╠❂➣ max1up「Foto」
+╠❂➣ max2up「Foto」
+╠❂➣ max3up「Foto」
+╠❂➣ max4up「Foto」
 ╠❂➣ Gift:「Mid」「Jumlah」
 ╠❂➣ Spam:「Mid」「Jumlah」
 ╠❂➣ Spamtag:「jumlahnya」
@@ -512,8 +512,9 @@ def helpprotect():
     helpMessage6 = """╔════════════════
 ╠❂➣  HELP PROTECT 
 ╠════════════════
-╠❂➣ Join dit
-╠❂➣ Ditpro 「on/off」
+╠❂➣ Join
+╠❂➣ Bye
+╠❂➣ Allpro「on/off」
 ╠❂➣ Notag「on/off」
 ╠❂➣ Protecturl「on/off」
 ╠❂➣ Protectjoin「on/off」
@@ -536,7 +537,7 @@ def helpbot():
 ╠❂➣ Ginfo
 ╠❂➣ Gruplist
 ╠❂➣ Info 「@」
-╠❂➣ Kick「@」
+╠❂➣ Ciak「@」
 ╠❂➣ Me
 ╠❂➣ Mid「@」
 ╠❂➣ Mymid
@@ -549,10 +550,10 @@ def helpbot():
 ╠❂➣ Sprespon
 ╠❂➣ Stealname「@」
 ╠❂➣ Stealcover「@」
-╠❂➣ Steacbio「@」
+╠❂➣ Stealbio「@」
 ╠❂➣ Stealpicture「@」
-╠❂➣ Stealvideoprofile「@」
-╠❂➣ Tagall
+╠❂➣ Bot1-4tag
+╠❂➣ แทค
 ╚════════════════
 By:【さัএπัஞ✵ບิथℓℓҨतΩ】
 """
@@ -2150,10 +2151,10 @@ def bot(op):
                             separate = msg.text.split(" ")
                             string = msg.text.replace(separate[0] + " ","")
                             if len(string) <= 10000000000:
-                                profile = kc.getProfile()
+                                profile = ke.getProfile()
                                 profile.displayName = string
-                                kc.updateProfile(profile)
-                                kc.sendMessage(msg.to,"Nama diganti jadi " + string + "")
+                                ke.updateProfile(profile)
+                                ke.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
 #===========BOT UPDATE============#
                         elif cmd == "tagall" or text.lower() == 'hai':
@@ -2212,7 +2213,7 @@ def bot(op):
 
                         elif cmd == "แทค":
                           if wait["selfbot"] == True:
-                            group = cl.getGroup(msg.to)
+                            group = aditmadzs.getGroup(msg.to)
                             nama = [contact.mid for contact in group.members]
                             k = len(nama)//20
                             for a in range(k+1):
@@ -2223,12 +2224,12 @@ def bot(op):
                                     b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                                     s += 7
                                     txt += u'@Alin \n'
-                                cl.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
-                                cl.sendMessage(to, "Hello {} Mention".format(str(len(nama)))) 
+                                aditmadzs.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
+                                aditmadzs.sendMessage(to, "Hello {} Mention".format(str(len(nama)))) 
 
                         elif cmd == "bot1tag":
                           if wait["selfbot"] == True:
-                            group = cl.getGroup(msg.to)
+                            group = ki.getGroup(msg.to)
                             nama = [contact.mid for contact in group.members]
                             k = len(nama)//20
                             for a in range(k+1):
@@ -2244,7 +2245,7 @@ def bot(op):
 
                         elif cmd == "bot2tag":
                           if wait["selfbot"] == True:
-                            group = cl.getGroup(msg.to)
+                            group = kk.getGroup(msg.to)
                             nama = [contact.mid for contact in group.members]
                             k = len(nama)//20
                             for a in range(k+1):
@@ -2260,7 +2261,7 @@ def bot(op):
 
                         elif cmd == "bot3tag":
                           if wait["selfbot"] == True:
-                            group = cl.getGroup(msg.to)
+                            group = kc.getGroup(msg.to)
                             nama = [contact.mid for contact in group.members]
                             k = len(nama)//20
                             for a in range(k+1):
@@ -2276,7 +2277,7 @@ def bot(op):
 
                         elif cmd == "bot4tag":
                           if wait["selfbot"] == True:
-                            group = cl.getGroup(msg.to)
+                            group = ke.getGroup(msg.to)
                             nama = [contact.mid for contact in group.members]
                             k = len(nama)//20
                             for a in range(k+1):
@@ -2778,7 +2779,7 @@ def bot(op):
                                     aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
 
 #===========KICKOUT============#
-                        elif ("Tampal " in msg.text):
+                        elif ("Nk " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
@@ -2789,17 +2790,17 @@ def bot(op):
                                for target in targets:
                                    if target not in Bots:
                                        try:
-                                           G = cl.getGroup(msg.to)
+                                           G = aditmadzs.getGroup(msg.to)
                                            G.preventedJoinByTicket = False
-                                           cl.updateGroup(G)
+                                           aditmadzs.updateGroup(G)
                                            invsend = 0
-                                           Ticket = cl.reissueGroupTicket(msg.to)
+                                           Ticket = aditmadzs.reissueGroupTicket(msg.to)
                                            sw.acceptGroupInvitationByTicket(msg.to,Ticket)
                                            sw.kickoutFromGroup(msg.to, [target])
                                            sw.leaveGroup(msg.to)
-                                           X = cl.getGroup(msg.to)
+                                           X = aditmadzs.getGroup(msg.to)
                                            X.preventedJoinByTicket = True
-                                           cl.updateGroup(X)
+                                           aditmadzs.updateGroup(X)
                                        except:
                                            pass
 
