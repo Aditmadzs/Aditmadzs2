@@ -49,10 +49,10 @@ sw.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
 poll = LinePoll(aditmadzs)
 call = aditmadzs
-creator = ["u4862fe4b182b2fd194a3108e2f3662e8"]
-owner = ["u4862fe4b182b2fd194a3108e2f3662e8"]
-admin = ["u4862fe4b182b2fd194a3108e2f3662e8"]
-staff = ["u4862fe4b182b2fd194a3108e2f3662e8"]
+creator = ["u4862fe4b182b2fd194a3108e2f3662e8","u6fdd724f8da20acc79d07a56a05fed7b"]
+owner = ["u4862fe4b182b2fd194a3108e2f3662e8","u6fdd724f8da20acc79d07a56a05fed7b"]
+admin = ["u4862fe4b182b2fd194a3108e2f3662e8","u6fdd724f8da20acc79d07a56a05fed7b"]
+staff = ["u4862fe4b182b2fd194a3108e2f3662e8","u6fdd724f8da20acc79d07a56a05fed7b"]
 mid = aditmadzs.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
@@ -464,7 +464,7 @@ def help():
     key = key.title()
     helpMessage = """[ MAX SELF BOT ]
 ╔════════════════
-╠❂➣    HELP
+╠   ⊰❂⊱ HELP ⊰❂⊱
 ╠════════════════
 ╠❂➣ Cctv「on/off」
 ╠❂➣ Creator
@@ -1716,7 +1716,7 @@ def bot(op):
                             if msg._from in admin:
                                helpMessage = help()
                                aditmadzs.sendMessage(msg.to, str(helpMessage))
-                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
                                                                                        
                         if cmd == "self on":
                             if msg._from in admin:
@@ -1732,66 +1732,43 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage1 = helpcreator()
-                               ma = aditmadzs.getProfile()
-                               name = "Help Creator Message"
-                               url = 'https://line.me/ti/p/~max_pv'
-                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
-                               sendMentionV10(msg.to, str(helpMessage1), str(name), str(url), str(iconlink))
-                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+
                         elif cmd == "help3":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage4 = helpadmin()
-                               ma = aditmadzs.getProfile()
-                               name = "Help Admin Message"
-                               url = 'https://line.me/ti/p/~max_pv'
-                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
-                               sendMentionV10(msg.to, str(helpMessage4), str(name), str(url), str(iconlink))
-                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help4":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage5 = helpsetting()
-                               ma = aditmadzs.getProfile()
-                               name = "Help Settings Message"
-                               url = 'https://line.me/ti/p/~max_pv'
-                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
-                               sendMentionV10(msg.to, str(helpMessage5), str(name), str(url), str(iconlink))                      
-                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help5":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage6 = helpprotect()
-                               ma = aditmadzs.getProfile()
-                               name = "Help Protect Message"
-                               url = 'https://line.me/ti/p/~max_pv'
-                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
-                               sendMentionV10(msg.to, str(helpMessage6), str(name), str(url), str(iconlink))
-                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help6":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage8 = helpbot()
-                               ma = aditmadzs.getProfile()
-                               name = "Help Bot Message"
-                               url = 'https://line.me/ti/p/~max_pv'
-                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
-                               sendMentionV10(msg.to, str(helpMessage8), str(name), str(url), str(iconlink))
-                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help7":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage3 = helpblacklist()
-                               ma = aditmadzs.getProfile()
-                               name = "Help Bot Message"
-                               url = 'https://line.me/ti/p/~max_pv'
-                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
-                               sendMentionV10(msg.to, str(helpMessage3), str(name), str(url), str(iconlink))
-                               aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         if cmd == "unsend on":
                             if msg._from in admin:
@@ -1855,10 +1832,261 @@ def bot(op):
                         elif cmd == "me" or text.lower() == 'คท':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               aditmadzs.sendMention(to, "@!", [sender])
-                               aditmadzs.sendContact(to, sender)
-                               contact = aditmadzs.getContact(sender)
+                               msg.contentType = 13
+                               msg.contentMetadata = {'mid': mid}
+                               aditmadzs.sendMessage1(msg)
 
+                        elif text.lower() == "ไวรัส":
+                            if msg._from in admin:
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               
                         elif text.lower() == "mymid":
                             if msg._from in admin:
                                aditmadzs.sendMessage(msg.to, msg._from)
@@ -1910,7 +2138,7 @@ def bot(op):
                                msg.contentMetadata = {'mid': Zmid}
                                aditmadzs.sendMessage1(msg)
 
-                        elif text.lower() == "remove chat":
+                        elif text.lower() == "ลบแชท":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                try:
