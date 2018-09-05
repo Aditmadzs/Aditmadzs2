@@ -88,88 +88,6 @@ responsename2 = kk.getProfile().displayName
 responsename3 = kc.getProfile().displayName
 responsename4 = ke.getProfile().displayName
 
-settings = {
-    "Picture":False,
-    "group":{},
-    "groupPicture":False,
-    "changePicture":False,
-    "autoJoinTicket":True,
-    "userAgent": [
-        "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (X11; U; Linux amd64; rv:5.0) Gecko/20100101 Firefox/5.0 (Debian)",
-        "Mozilla/5.0 (X11; U; Linux amd64; en-US; rv:5.0) Gecko/20110619 Firefox/5.0",
-        "Mozilla/5.0 (X11; Linux) Gecko Firefox/5.0",
-        "Mozilla/5.0 (X11; Linux x86_64; rv:5.0) Gecko/20100101 Firefox/5.0 FirePHP/0.5",
-        "Mozilla/5.0 (X11; Linux x86_64; rv:5.0) Gecko/20100101 Firefox/5.0 Firefox/5.0",
-        "Mozilla/5.0 (X11; Linux x86_64) Gecko Firefox/5.0",
-        "Mozilla/5.0 (X11; Linux ppc; rv:5.0) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (X11; Linux AMD64) Gecko Firefox/5.0",
-        "Mozilla/5.0 (X11; FreeBSD amd64; rv:5.0) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:5.0) Gecko/20110619 Firefox/5.0",
-        "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:5.0) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (Windows NT 6.1.1; rv:5.0) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (Windows NT 5.2; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (Windows NT 5.1; U; rv:5.0) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (Windows NT 5.1; rv:2.0.1) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (Windows NT 5.0; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
-        "Mozilla/5.0 (Windows NT 5.0; rv:5.0) Gecko/20100101 Firefox/5.0"
-    ]
-}
-
-wait = {
-    "limit": 1,
-    "owner":{},
-    "admin":{},
-    "addadmin":False,
-    "delladmin":False,
-    "staff":{},
-    "addstaff":False,
-    "dellstaff":False,
-    "bots":{},
-    "addbots":False,
-    "dellbots":False,
-    "blacklist":{},
-    "wblacklist":False,
-    "dblacklist":False,
-    "Talkblacklist":{},
-    "Talkwblacklist":False,
-    "Talkdblacklist":False,
-    "blacklist": {
-        "u2b2e60930f1365f0806c7d0a6898cc93": true,
-        "u705189478e7afd24a601fd25827e6b15": true,
-        "ub3c2810ee372305631758bd937deb517": true
-    },
-    "talkban":True,
-    "contact":False,
-    'autoJoin':True,
-    'autoAdd':True,
-    'autoLeave':False,
-    'autoLeave1':True,
-    "autoRead":True,
-    "Mentiongift":True
-    "detectMention":True,
-    "Mentionkick":False,
-    "welcomeOn":False,
-    "sticker":False,
-    "selfbot":True,
-    "unsend":True
-    "mention":"NGINTIPPP!!!",
-    "Respontag":"SEKARANG TAG BESOK JATUH CINTA 😨",
-    "welcome":"Selamat datang & betah",
-    "comment":"Like like & like by 【さัএπัஞ✵ບิथℓℓҨतΩ】",
-    "message":"【さัএπัஞ✵ບิथℓℓҨतΩ】 :\nList opsi\n🤖 Pasangan Hidup :\n🔰 Only Status ⏩ 180K/Bulan\n\n🤖 Systim Contract :\n🔰 Only Curhat ⏩ 100K/Bulan\n🔰 Zona Friend + TTM\n🔰 Zona Nyaman + Full Care + On 5day + 2 day free ⏩ 300K/Bulan\n\n✍️ Bisa Requests Mau Berapa Lama Durasi Buat Debay.\nChat Ke : http://line.me/ti/p/~max_pv\n\n📃\n* Always on 24 Jam\n* Keuntungan Banyak\n* Durasi min 0.25month\n* max no limit",
-    "leave": "Good Bye, See You Next Time ??",
-    }
-
-read = {
-    "readPoint":{},
-    "readMember":{},
-    "readTime":{},
-    "ROM":{},
-}
-
 cctv = {
     "cyduk":{},
     "point":{},
@@ -474,6 +392,8 @@ def help():
 ╠❂➣ Help3
 ╠❂➣ Help4
 ╠❂➣ Help5
+╠❂➣ Help6
+╠❂➣ Help7
 ╠❂➣ Listbot
 ╠❂➣ Listadmin
 ╠❂➣ Status
@@ -1732,43 +1652,61 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage1 = helpcreator()
-                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
-                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               ma = aditmadzs.getProfile()
+                               name = "Help Creator Message"
+                               url = 'https://line.me/ti/p/~adit_cmct'
+                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
+                               sendMentionV10(msg.to, str(helpMessage1), str(name), str(url), str(iconlink))
 
                         elif cmd == "help3":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage4 = helpadmin()
-                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
-                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
-
+                               ma = aditmadzs.getProfile()
+                               name = "Help Admin Message"
+                               url = 'https://line.me/ti/p/~adit_cmct'
+                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
+                               sendMentionV10(msg.to, str(helpMessage4), str(name), str(url), str(iconlink))
+                               
                         elif cmd == "help4":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage5 = helpsetting()
-                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
-                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               ma = aditmadzs.getProfile()
+                               name = "Help Settings Message"
+                               url = 'https://line.me/ti/p/~adit_cmct'
+                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
+                               sendMentionV10(msg.to, str(helpMessage5), str(name), str(url), str(iconlink))                      
 
                         elif cmd == "help5":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage6 = helpprotect()
-                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
-                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               ma = aditmadzs.getProfile()
+                               name = "Help Protect Message"
+                               url = 'https://line.me/ti/p/~adit_cmct'
+                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
+                               sendMentionV10(msg.to, str(helpMessage6), str(name), str(url), str(iconlink))
 
                         elif cmd == "help6":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage8 = helpbot()
-                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
-                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               ma = aditmadzs.getProfile()
+                               name = "Help Bot Message"
+                               url = 'https://line.me/ti/p/~adit_cmct'
+                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
+                               sendMentionV10(msg.to, str(helpMessage8), str(name), str(url), str(iconlink))
 
                         elif cmd == "help7":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage3 = helpblacklist()
-                               aditmadzs.sendMessage(msg.to, str(helpMessage1))
-                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+                               ma = aditmadzs.getProfile()
+                               name = "Help Bot Message"
+                               url = 'https://line.me/ti/p/~adit_cmct'
+                               iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
+                               sendMentionV10(msg.to, str(helpMessage3), str(name), str(url), str(iconlink))
 
                         if cmd == "unsend on":
                             if msg._from in admin:
