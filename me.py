@@ -422,6 +422,8 @@ def helpcreator():
 ╠❂➣ Set respon:「Text」
 ╠❂➣ Set welcome:「Text」
 ╠❂➣ Set leave:「Text」
+╠❂➣ Myname:「Name」
+╠❂➣ Mybio:「Name」
 ╠❂➣ 1name:「Name」
 ╠❂➣ 2name:「Name」
 ╠❂➣ 3name:「Name」
@@ -1723,34 +1725,34 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "╭═════ STATUS ═════\n"
-                                if wait["unsend"] == True: md+="║»» ✔️ Unsend「ON」\n"
-                                else: md+="║»» ❌ Unsend「OFF」\n"                                
-                                if wait["Mentionkick"] == True: md+="║»» ✔️ Notag「ON」\n"
-                                else: md+="║»» ❌ Notag「OFF」\n"
-                                if wait["detectMention"] == True: md+="║»» ✔️ Respon「ON」\n"
-                                else: md+="║»» ❌ Respon「OFF」\n"                   
-                                if wait["autoJoin"] == True: md+="║»» ✔️ Autojoin「ON」\n"
-                                else: md+="║»» ❌ Autojoin「OFF」\n"
-                                if settings["autoJoinTicket"] == True: md+="║»» ✔️ Jointicket「ON」\n"
-                                else: md+="║»» ❌ Jointicket「OFF」\n"                                
-                                if wait["autoAdd"] == True: md+="║»» ✔️ Autoadd「ON」\n"
-                                else: md+="║»» ❌ Autoadd「OFF」\n"
-                                if msg.to in welcome: md+="║»» ✔️ Welcome「ON」\n"
-                                else: md+="║»» ❌ Welcome「OFF」\n"                 
-                                if wait["autoLeave"] == True: md+="║»» ✔️ Autoleave「ON」\n"
-                                else: md+="║»» ❌ Autoleave「OFF」\n"
-                                if msg.to in protectqr: md+="║»» ✔️ Protecturl「ON」\n"
-                                else: md+="║»» ❌ Protecturl「OFF」\n"
-                                if msg.to in protectjoin: md+="║»» ✔️ ProtectJoin「ON」\n"
-                                else: md+="║»» ❌ ProtectJoin「OFF」\n"
-                                if msg.to in protectkick: md+="║»» ✔️ Protectkick「ON」\n"
-                                else: md+="║»» ❌ Protectkick「OFF」\n"
-                                if msg.to in protectcancel: md+="║»» ✔️ Protectcancel「ON」\n"
-                                else: md+="║»» ❌ Protectcancel「OFF」\n"
-                                if msg.to in protectinvite: md+="║»» ✔️ Protectinvite「ON」\n"
-                                else: md+="║»» ❌ Protectinvite「OFF」\n"                                
-                                aditmadzs.sendMessage(msg.to, md+"║»»════════════\n║»» Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n║»» Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n╰════════════")
+                                md = "╔═════ STATUS ═════\n"
+                                if wait["unsend"] == True: md+="╠❂➣ ✔️ Unsend「ON」\n"
+                                else: md+="╠❂➣ ❌ Unsend「OFF」\n"                                
+                                if wait["Mentionkick"] == True: md+="╠❂➣ ✔️ Notag「ON」\n"
+                                else: md+="╠❂➣ ❌ Notag「OFF」\n"
+                                if wait["detectMention"] == True: md+="╠❂➣ ✔️ Respon「ON」\n"
+                                else: md+="╠❂➣ ❌ Respon「OFF」\n"                   
+                                if wait["autoJoin"] == True: md+="╠❂➣ ✔️ Autojoin「ON」\n"
+                                else: md+="╠❂➣ ❌ Autojoin「OFF」\n"
+                                if settings["autoJoinTicket"] == True: md+="╠❂➣ ✔️ Jointicket「ON」\n"
+                                else: md+="╠❂➣ ❌ Jointicket「OFF」\n"                                
+                                if wait["autoAdd"] == True: md+="╠❂➣ ✔️ Autoadd「ON」\n"
+                                else: md+="╠❂➣ ❌ Autoadd「OFF」\n"
+                                if msg.to in welcome: md+="╠❂➣ ✔️ Welcome「ON」\n"
+                                else: md+="╠❂➣ ❌ Welcome「OFF」\n"                 
+                                if wait["autoLeave"] == True: md+="╠❂➣ ✔️ Autoleave「ON」\n"
+                                else: md+="╠❂➣ ❌ Autoleave「OFF」\n"
+                                if msg.to in protectqr: md+="╠❂➣ ✔️ Protecturl「ON」\n"
+                                else: md+="╠❂➣ ❌ Protecturl「OFF」\n"
+                                if msg.to in protectjoin: md+="╠❂➣ ✔️ ProtectJoin「ON」\n"
+                                else: md+="╠❂➣ ❌ ProtectJoin「OFF」\n"
+                                if msg.to in protectkick: md+="╠❂➣ ✔️ Protectkick「ON」\n"
+                                else: md+="╠❂➣ ❌ Protectkick「OFF」\n"
+                                if msg.to in protectcancel: md+="╠❂➣ ✔️ Protectcancel「ON」\n"
+                                else: md+="╠❂➣ ❌ Protectcancel「OFF」\n"
+                                if msg.to in protectinvite: md+="╠❂➣ ✔️ Protectinvite「ON」\n"
+                                else: md+="╠❂➣ ❌ Protectinvite「OFF」\n"                                
+                                aditmadzs.sendMessage(msg.to, md+"╠════════════\n╠❂➣ Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n╠❂➣ Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n╚════════════")
                                 aditmadzs.sendContact(op.param1, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "ผส" or text.lower() == 'creator':
@@ -1774,7 +1776,7 @@ def bot(op):
                                msg.contentMetadata = {'mid': mid}
                                aditmadzs.sendMessage1(msg)
 
-                        elif text.lower() == "ไวรัส":
+                        elif text.lower() == "my bot":
                             if msg._from in admin:
                                aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
                                aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
