@@ -1652,25 +1652,25 @@ def bot(op):
                             if msg._from in admin:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
-                                 Setmain['phreadPoint'][msg.to] = msg_id
-                                 Setmain['phreadMember'][msg.to] = {}
-                                 cl.sendMessage(msg.to, "Lurking berhasil diaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
-
+                                 Setmain['RAreadPoint'][msg.to] = msg_id
+                                 Setmain['RAreadMember'][msg.to] = {}
+                                 cl.sendText(msg.to, "Lurking berhasil diaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                            
                         elif cmd == "lurking off":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
-                                 del Setmain['phreadPoint'][msg.to]
-                                 del Setmain['phreadMember'][msg.to]
-                                 cl.sendMessage(msg.to, "Lurking berhasil dinoaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
-
+                                 del Setmain['RAreadPoint'][msg.to]
+                                 del Setmain['RAreadMember'][msg.to]
+                                 cl.sendText(msg.to, "Lurking berhasil dinoaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                            
                         elif cmd == "lurkers":
                           if msg._from in admin:
-                            if msg.to in Setmain['phreadPoint']:
-                                if Setmain['phreadMember'][msg.to] != {}:
+                            if msg.to in Setmain['RAreadPoint']:
+                                if Setmain['RAreadMember'][msg.to] != {}:
                                     aa = []
-                                    for x in Setmain['phreadMember'][msg.to]:
+                                    for x in Setmain['RAreadMember'][msg.to]:
                                         aa.append(x)
                                     try:
                                         arrData = ""
@@ -1705,16 +1705,16 @@ def bot(op):
                                     except:
                                         pass
                                     try:
-                                        del Setmain['phreadPoint'][msg.to]
-                                        del Setmain['phreadMember'][msg.to]
+                                        del Setmain['RAreadPoint'][msg.to]
+                                        del Setmain['RAreadMember'][msg.to]
                                     except:
                                         pass
-                                    Setmain['phreadPoint'][msg.to] = msg.id
-                                    Setmain['phreadMember'][msg.to] = {}
+                                    Setmain['RAreadPoint'][msg.to] = msg.id
+                                    Setmain['RAreadMember'][msg.to] = {}
                                 else:
-                                    cl.sendMessage(msg.to, "User kosong...")
+                                    cl.sendText(msg.to, "User kosong...")
                             else:
-                                cl.sendMessage(msg.to, "Ketik lurking on dulu")
+                                cl.sendText(msg.to, "Ketik lurking on dulu")
 
                         elif cmd == "sider on":
                           if wait["selfbot"] == True:
