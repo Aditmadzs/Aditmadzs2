@@ -383,6 +383,7 @@ def help():
 ╠ ✯͜͡❂Listbot
 ╠ ✯͜͡❂Listadmin
 ╠ ✯͜͡❂Status
+╠ ✯͜͡❂Sider「on/off」
 ╠══════════════════
 ╠ ✯͜͡❂ http://line.me/ti/p/~max_pv
 ╚═ CREATOR:MAXSY
@@ -1473,6 +1474,7 @@ def bot(op):
                                url = 'https://line.me/ti/p/~adit_cmct'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage1), str(name), str(url), str(iconlink))
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help3":
                           if wait["selfbot"] == True:
@@ -1483,7 +1485,8 @@ def bot(op):
                                url = 'https://line.me/ti/p/~adit_cmct'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage4), str(name), str(url), str(iconlink))
-                               
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
+
                         elif cmd == "help4":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -1493,6 +1496,7 @@ def bot(op):
                                url = 'https://line.me/ti/p/~adit_cmct'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage5), str(name), str(url), str(iconlink))                      
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help5":
                           if wait["selfbot"] == True:
@@ -1503,6 +1507,7 @@ def bot(op):
                                url = 'https://line.me/ti/p/~adit_cmct'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage6), str(name), str(url), str(iconlink))
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help6":
                           if wait["selfbot"] == True:
@@ -1513,6 +1518,7 @@ def bot(op):
                                url = 'https://line.me/ti/p/~adit_cmct'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage8), str(name), str(url), str(iconlink))
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         elif cmd == "help7":
                           if wait["selfbot"] == True:
@@ -1523,6 +1529,7 @@ def bot(op):
                                url = 'https://line.me/ti/p/~adit_cmct'
                                iconlink = 'http://dl.profile.line-cdn.net/{}'.format(str(ma.pictureStatus))
                                sendMentionV10(msg.to, str(helpMessage3), str(name), str(url), str(iconlink))
+                               aditmadzs.sendContact(to, "u4862fe4b182b2fd194a3108e2f3662e8")
 
                         if cmd == "unsend on":
                             if msg._from in admin:
@@ -1750,10 +1757,11 @@ def bot(op):
 
                         elif cmd == "restart":
                           if wait["selfbot"] == True:
-                            if msg._from in creator:
-                               aditmadzs.sendMessage(msg.to, "Restart Sukses Bos!...")
+                            if msg._from in admin:
+                               cl.sendMessage(msg.to, "Tunggu sebentar...")
                                Setmain["restartPoint"] = msg.to
                                restartBot()
+                               cl.sendMessage(msg.to, "Silahkan gunakan seperti semula...")
                             
                         elif cmd == "runtime":
                           if wait["selfbot"] == True:
@@ -2264,7 +2272,7 @@ def bot(op):
                               try:
                                   tz = pytz.timezone("Asia/Jakarta")
                                   timeNow = datetime.now(tz=tz)
-                                  cl.sendMessage(msg.to, "Cek sider diaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                  aditmadzs.sendMessage(msg.to, "Cek sider diaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
                                   del cctv['point'][msg.to]
                                   del cctv['sidermem'][msg.to]
                                   del cctv['cyduk'][msg.to]
@@ -2281,9 +2289,9 @@ def bot(op):
                                   tz = pytz.timezone("Asia/Jakarta")
                                   timeNow = datetime.now(tz=tz)
                                   cctv['cyduk'][msg.to]=False
-                                  cl.sendMessage(msg.to, "Cek sider dinonaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                  aditmadzs.sendMessage(msg.to, "Cek sider dinonaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
                               else:
-                                  cl.sendMessage(msg.to, "Sudak tidak aktif")
+                                  aditmadzs.sendMessage(msg.to, "Sudak tidak aktif")
 
                         elif cmd.startswith("spamtag: "):
                           if wait["selfbot"] == True:
@@ -2400,7 +2408,6 @@ def bot(op):
                                     aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
                                     
 #===========Protection============#                                    
-
                         elif 'Protecturl ' in msg.text:
                            if msg._from in admin:
                               spl = msg.text.replace('Protecturl ','')
@@ -2501,7 +2508,7 @@ def bot(op):
                                          msgs = "Protect invite sudah tidak aktif"
                                     aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)                                                 
 
-                        elif 'Ditpro ' in msg.text:
+                        elif 'Allpro ' in msg.text:
                            if msg._from in admin:
                               spl = msg.text.replace('Ditpro ','')
                               if spl == 'on':
