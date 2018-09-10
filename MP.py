@@ -2121,13 +2121,20 @@ def bot(op):
                                     me += str(e) + ". " +aditmadzs.getGroup(group).name + "\n"                                    
                                 aditmadzs.sendMessage(msg.to,"»» Aditmadzs Protect\n\n»» PROTECT URL :\n"+ma+"\n»» PROTECT KICK :\n"+mb+"\n»» PROTECT JOIN :\n"+md+"\n»» PROTECT CANCEL:\n"+mc+"\n»» PROTECT INVITE :\n"+me+"\nTotal「%s」Protect yang aktif" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel)+len(protectinvite))))
 
-                        elif cmd == "check":
+                        elif cmd == "respon":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 ki.sendMessage(msg.to,responsename1)
                                 kk.sendMessage(msg.to,responsename2)
                                 kc.sendMessage(msg.to,responsename3)
     
+                        elif cmd == "check":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                ki.sendMessage(msg.to, "เมียหลวง")
+                                kk.sendMessage(msg.to, "เมียน้อย")
+                                kc.sendMessage(msg.to, "กิ๊ก")
+
                         elif cmd == "alljoin":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -2174,7 +2181,7 @@ def bot(op):
                                 get_contact_time = time.time() - get_contact_time_start
                                 aditmadzs.sendMessage(msg.to, " »» Aditmadzs Speed respon\n\n - Get Profile\n   %.10f\n - Get Contact\n   %.10f\n - Get Group\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
 
-                        elif cmd == "speed" or cmd == "sp":
+                        elif cmd == "tes" or cmd == "test":
                           if wait["selfbot"] == True:
                                start = time.time()
                                print("Speed")
@@ -2188,6 +2195,14 @@ def bot(op):
                                sendMentionV10(msg.to, str(text), str(name), str(url), str(iconlink))
                                aditmadzs.sendMessage(msg.to,format(str(elapsed_time)))
 
+                        elif cmd == "speed" or cmd == "sp":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                               start = time.time()
+                               aditmadzs.sendMessage(msg.to, "Waiting....")
+                               elapsed_time = time.time() - start
+                               aditmadzs.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
+ 
                         elif cmd == "speedbot" or cmd == "spb":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -2448,7 +2463,7 @@ def bot(op):
                                          msgs = "Protect kick sudah tidak aktif"
                                     aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
 
-                        elif 'protectjoin ' in msg.text:
+                        elif 'Protectjoin ' in msg.text:
                            if msg._from in admin:
                               spl = msg.text.replace('protectjoin ','')
                               if spl == 'on':
