@@ -5,10 +5,7 @@
 ----
 # [ADD ME!](http://line.me/ti/p/~adit_cmct)
 # Ambil Token Bisa Di
-# [ADITMADZS PUBLIC BOT](http://line.me/ti/p/~aditmadzsbot2)
-# [ADITMADZS Public BOT](http://line.me/ti/p/~aditmadzsbot1)
-# [ADITMADZS Bot Public](http://line.me/ti/p/~aditmadzsbot)
-# [ADITMADZS BOT Public](http://line.me/ti/p/~aditmadzsbot6)
+# [ADITMADZS Bot Public](line.me/ti/p/~botaditmadzs)
 
 # Termux
 
