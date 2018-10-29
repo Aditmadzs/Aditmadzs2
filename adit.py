@@ -12,14 +12,14 @@ from bs4 import BeautifulSoup
 from googletrans import Translator
 import youtube_dl
 
-#aditmadzs = LineClient()
-aditmadzs = LineClient(authToken='ISI TOKEN MU CINTA')
+aditmadzs = LineClient()
+#aditmadzs = LineClient(authToken='LOGIN TOKEN')
 aditmadzs.log("Auth Token : " + str(aditmadzs.authToken))
 channel = LineChannel(aditmadzs)
 aditmadzs.log("Channel Access Token : " + str(channel.channelAccessToken))
 
-#ki = LineClient()
-ki = LineClient(authToken='ISI TOKEN MU CINTA')
+ki = LineClient()
+#ki = LineClient(authToken='LOGIN TOKEN')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
